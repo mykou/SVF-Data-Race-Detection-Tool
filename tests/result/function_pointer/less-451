@@ -1,0 +1,123 @@
+﻿=========================================================================================
+Indirect call sites: 12
+=========================================================================================
+NodeID: 4234
+CallSite:   %call24 = tail call i32 (...)* %cond23() #7, !dbg !4331     Location: ln: 84 fl: brac.c      with Targets:
+        ch_forw_get
+        ch_back_get
+-------------------------------------------------------
+Call hierarchy:
+init	chget = (forwdir) ? ch_forw_get : ch_back_get;		/// line 82, brac.c
+CS		while ((c = (*chget)()) != EOI)						/// line 83, brac.c
+=========================================================================================
+NodeID: 19632
+CallSite:   call void (i32, i8*, ...)* %callee.knr.cast(i32 0, i8* %s) #7, !dbg !4342   Location: ln: 96 fl: option.c    with Targets:
+        opt_o
+        opt__O
+        opt_j
+        opt_shift
+        opt_k
+        opt_t
+        opt__T
+        opt_p
+        opt__P
+        opt_b
+        opt_i
+        opt__V
+        opt_x
+        opt_quote
+        opt_query
+
+NodeID: 20166
+CallSite:   call void (i32, i8*, ...)* %callee.knr.cast150(i32 0, i8* %str.0.load240249) #7, !dbg !4439 Location: ln: 277 fl: option.c   with Targets:
+        opt_o
+        opt__O
+        opt_j
+        opt_shift
+        opt_k
+        opt_t
+        opt__T
+        opt_p
+        opt__P
+        opt_b
+        opt_i
+        opt__V
+        opt_x
+        opt_quote
+        opt_query
+-------------------------------------------------------
+Comment: There is a global variable defined in line 132, opttbl.c
+               static struct loption option[] = {...};
+         It is an array whose elements have function pointer field and points to some function in this initialization.
+         pendopt is another global variable defined in line 23, option.c
+		 scan_option will be called twice in main function and the second call will be inside a while loop.
+-------------------------------------------------------
+Call hierarchy:
+	main()
+		scan_option(save(s));									/// line 138, main.c
+CS1			(*pendopt->ofunc)(INIT, s);							/// line 96, option.c
+			o = findopt(optc);									/// line 179, option.c
+init			for (o = option;  o->oletter != '\0';  o++)		/// line 487, opttbl.c
+				return (o);										/// line 490, opttbl.c
+pass		pendopt = o;										/// line 252, option.c
+pass		pendopt = o;										/// line 267, option.c
+CS2			(*o->ofunc)(INIT, str);								/// line 277, option.c
+=========================================================================================
+NodeID: 20412
+CallSite:   call void (i32, i8*, ...)* %callee.knr.cast(i32 %cond, i8* %incdec.ptr17.i187) #7, !dbg !4321       Location: ln: 432 fl: option.c   with Targets:
+        opt_o
+        opt__O
+        opt_j
+        opt_shift
+        opt_k
+        opt_t
+        opt__T
+        opt_p
+        opt__P
+        opt_b
+        opt_i
+        opt__V
+        opt_x
+        opt_quote
+        opt_query
+-------------------------------------------------------
+Call hierarchy:
+	main()
+		commands();					/// line 287, main.c
+			switch (mca_char(c))	/// line 1071, command.c
+				ret = mca_opt_char(c);		/// line 566, command.c
+					curropt = findopt(c);										/// line 440, command.c
+init					for (o = option;  o->oletter != '\0';  o++)				/// line 487, opttbl.c
+						return (o);												/// line 490, opttbl.c
+					toggle_option(curropt, ASCII_IS_LOWER(c), "", optflag);		/// line 456, command.c
+CS1						(*o->ofunc)(...);										/// line 432, option.c
+				exec_mca();														/// line 592, command.c
+					toggle_option(curropt, opt_lower, cbuf, optflag);			/// line 235, command.c
+same as CS1				(*o->ofunc)(...);										/// line 432, option.c
+				exec_mca();														/// line 612, command.c
+					toggle_option(curropt, opt_lower, cbuf, optflag);			/// line 235, command.c
+same as CS1				(*o->ofunc)(...);										/// line 432, option.c
+-------------------------------------------------------
+Comment: curropt is a global variable defined in line 65, command.c
+=========================================================================================
+NodeID: 20712
+CallSite:   tail call void (i32, i8*, ...)* %callee.knr.cast(i32 0, i8* null) #7, !dbg !4323    Location: ln: 474 fl: opttbl.c   with Targets:
+        opt_o
+        opt__O
+        opt_j
+        opt_shift
+        opt_k
+        opt_t
+        opt__T
+        opt_p
+        opt__P
+        opt_b
+        opt_i
+        opt__V
+        opt_x
+        opt_quote
+        opt_query
+-------------------------------------------------------
+Call hierarchy:
+init	for (o = option;  o->oletter != '\0';  o++)			/// line 466, opttbl.c
+CS		(*(o->ofunc))(INIT, (char *) NULL);					/// line 474, opttbl.c

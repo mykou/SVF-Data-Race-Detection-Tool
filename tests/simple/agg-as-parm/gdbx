@@ -1,0 +1,3 @@
+file dvf
+b main
+r -debug-only=regpt case1.bc

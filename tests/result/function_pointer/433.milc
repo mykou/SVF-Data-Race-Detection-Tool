@@ -1,0 +1,42 @@
+﻿====================================================================================
+Indirect call sites: 4
+====================================================================================
+Function Pointers: 1, func
+Comment: func is the first parameter of function make_gather which is called from
+         make_3n_gathers() and make_nn_gathers().
+====================================================================================
+Number of targets: 2 at each call site
+====================================================================================
+Call hierarchy:
+	main()
+		setup()												/// line 30,  control.c
+			make_nn_gathers()								/// line 55,  setup.c
+init1			make_gather(third_neighbor,...);			/// line 246, setup.c
+CS1						func( s->x, s->y, s->z, s->t, args, ...);	/// line 240, com_vanilla.c
+CS2						func( x, y, z, t, args, FORWARDS, ...);		/// line 266
+CS3						func( s->x, s->y, s->z, s->t, args, ...);	/// line 347
+CS4						func( s->x, s->y, s->z, s->t, args, ...);	/// line 365
+			make_3n_gathers()								/// line 59,  setup.c
+init2			make_gather(neighbor_coords_special,...);	/// line 118, setup.c
+====================================================================================
+Output from analysis.
+
+NodeID: 39112
+CallSite:   call void %43(i32 %conv55, i32 %conv57, i32 %conv59, i32 %conv61, i32* %52, i32 1, i32* %x, i32* %y, i32* %z, i32* %t), !dbg !2298  Location: ln: 240 fl: com_vanilla.c     with Targets:
+        third_neighbor
+        neighbor_coords_special
+
+NodeID: 39269
+CallSite:   call void %112(i32 %113, i32 %114, i32 %115, i32 %116, i32* %117, i32 1, i32* %x2, i32* %y2, i32* %z2, i32* %t2), !dbg !2320        Location: ln: 266 fl: com_vanilla.c     with Targets:
+        third_neighbor
+        neighbor_coords_special
+
+NodeID: 39347
+CallSite:   call void %149(i32 %conv186, i32 %conv188, i32 %conv190, i32 %conv192, i32* %158, i32 1, i32* %x, i32* %y, i32* %z, i32* %t), !dbg !2331    Location: ln: 347 fl: com_vanilla.c      with Targets:
+        third_neighbor
+        neighbor_coords_special
+
+NodeID: 39405
+CallSite:   call void %175(i32 %conv212, i32 %conv214, i32 %conv216, i32 %conv218, i32* %184, i32 -1, i32* %x, i32* %y, i32* %z, i32* %t), !dbg !2339   Location: ln: 365 fl: com_vanilla.c      with Targets:
+        third_neighbor
+        neighbor_coords_special

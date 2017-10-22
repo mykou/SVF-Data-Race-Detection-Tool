@@ -1,0 +1,4 @@
+#!/bin/bash
+
+/home/djwainwr/beaker-ws/src/llvm-3.0/obj/Debug+Asserts/bin/clang -emit-llvm $@
+exit $?

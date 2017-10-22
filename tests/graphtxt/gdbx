@@ -1,0 +1,4 @@
+file dvf
+b main
+b DAAPass.cpp:77
+r -debug-only=dda -print-alias -dump-pag -cdaa -graphtxt=11graph.txt case.bc

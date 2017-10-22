@@ -1,0 +1,271 @@
+analysing ./crafty.orig
+analysing ./mcf.orig
+analysing ./twolf.orig
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 624 File:findfeeds.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 94 File:utemp.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 37 File:findcost.c )
+analysing ./mesa.orig
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1878 File:dlist.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1959 File:dlist.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 547 File:attrib.c )   (FP)
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 554 File:attrib.c )   (FP)
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 563 File:attrib.c )	(FP)
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 1804 File:teximage.c )
+		 conditional free path: 
+		  --> (line: 1138 File:teximage.c ) 
+		  --> (line: 1143 File:teximage.c ) 
+		  --> (line: 1145 File:teximage.c ) 
+		  --> (line: 1171 File:teximage.c ) 
+		  --> (line: 1183 File:teximage.c ) 
+		  --> (line: 1198 File:teximage.c ) 
+		  --> (line: 1222 File:teximage.c ) 
+		  --> (line: 1227 File:teximage.c ) 
+		  --> (line: 1229 File:teximage.c ) 
+		  --> (line: 1255 File:teximage.c ) 
+		  --> (line: 1267 File:teximage.c ) 
+		  --> (line: 1282 File:teximage.c ) 
+		  --> (line: 1814 File:teximage.c ) 
+
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1030 File:api2.c )   (FP)
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 556 File:attrib.c )  (FP)
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 549 File:attrib.c )  (FP)
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 565 File:attrib.c )  (FP)
+analysing ./perlbmk.orig
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 1849 File:op.c )
+		 conditional free path: 
+		  --> (line: 1860 File:op.c ) 
+		  --> (line: 614 File:op.c ) 
+		  --> (line: 624 File:op.c ) 
+
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 4520 File:op.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 4531 File:op.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1981 File:toke.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 4546 File:op.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 2293 File:op.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 2226 File:op.c )
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 2825 File:pp.c )
+		 conditional free path: 
+		  --> (line: 2863 File:pp.c ) 
+		  --> (line: 2864 File:pp.c ) 
+		  --> (line: 2877 File:pp.c ) 
+
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 68 File:MD5.c )
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 1682 File:pp.c )
+		 conditional free path: 
+		  --> (line: 1685 File:pp.c ) 
+
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 4661 File:op.c )
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 2050 File:op.c )
+		 conditional free path: 
+		  --> (line: 2068 File:op.c ) 
+		  --> (line: 614 File:op.c ) 
+		  --> (line: 624 File:op.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 2761 File:pp.c )
+		 conditional free path: 
+		  --> (line: 2814 File:pp.c ) 
+
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 4893 File:op.c )
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 2033 File:op.c )
+		 conditional free path: 
+		  --> (line: 2039 File:op.c ) 
+		  --> (line: 614 File:op.c ) 
+		  --> (line: 624 File:op.c ) 
+
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 4899 File:op.c )
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 365 File:doop.c )
+		 conditional free path: 
+		  --> (line: 124 File:util.c ) 
+
+analysing ./bzip2.orig
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 287 File:spec.c )
+analysing ./ammp.orig
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 103 File:unonbon.c )
+		 conditional free path: 
+		  --> (line: 107 File:unonbon.c ) 
+		  --> (line: 110 File:unonbon.c ) 
+		  --> (line: 118 File:unonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 106 File:unonbon.c )
+		 conditional free path: 
+		  --> (line: 110 File:unonbon.c ) 
+		  --> (line: 118 File:unonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 109 File:unonbon.c )
+		 conditional free path: 
+		  --> (line: 118 File:unonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 235 File:unonbon.c )
+		 conditional free path: 
+		  --> (line: 239 File:unonbon.c ) 
+		  --> (line: 242 File:unonbon.c ) 
+		  --> (line: 250 File:unonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 238 File:unonbon.c )
+		 conditional free path: 
+		  --> (line: 242 File:unonbon.c ) 
+		  --> (line: 250 File:unonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 241 File:unonbon.c )
+		 conditional free path: 
+		  --> (line: 250 File:unonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 121 File:rectmm.c )
+		 conditional free path: 
+		  --> (line: 125 File:rectmm.c ) 
+		  --> (line: 128 File:rectmm.c ) 
+		  --> (line: 182 File:rectmm.c ) 
+		  --> (line: 195 File:rectmm.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 124 File:rectmm.c )
+		 conditional free path: 
+		  --> (line: 128 File:rectmm.c ) 
+		  --> (line: 182 File:rectmm.c ) 
+		  --> (line: 195 File:rectmm.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 127 File:rectmm.c )
+		 conditional free path: 
+		  --> (line: 182 File:rectmm.c ) 
+		  --> (line: 195 File:rectmm.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 95 File:vnonbon.c )
+		 conditional free path: 
+		  --> (line: 104 File:vnonbon.c ) 
+		  --> (line: 116 File:vnonbon.c ) 
+		  --> (line: 123 File:vnonbon.c ) 
+		  --> (line: 133 File:vnonbon.c ) 
+		  --> (line: 136 File:vnonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 103 File:vnonbon.c )
+		 conditional free path: 
+		  --> (line: 116 File:vnonbon.c ) 
+		  --> (line: 123 File:vnonbon.c ) 
+		  --> (line: 133 File:vnonbon.c ) 
+		  --> (line: 136 File:vnonbon.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 52 File:mom.c )
+		 conditional free path: 
+		  --> (line: 55 File:mom.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 53 File:mom.c )
+		 conditional free path: 
+		  --> (line: 55 File:mom.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 54 File:mom.c )
+		 conditional free path: 
+		  --> (line: 55 File:mom.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 290 File:tether.c )
+		 conditional free path: 
+		  --> (line: 297 File:tether.c ) 
+		  --> (line: 303 File:tether.c ) 
+		  --> (line: 337 File:tether.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 291 File:tether.c )
+		 conditional free path: 
+		  --> (line: 297 File:tether.c ) 
+		  --> (line: 303 File:tether.c ) 
+		  --> (line: 337 File:tether.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 292 File:tether.c )
+		 conditional free path: 
+		  --> (line: 297 File:tether.c ) 
+		  --> (line: 303 File:tether.c ) 
+		  --> (line: 337 File:tether.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 293 File:tether.c )
+		 conditional free path: 
+		  --> (line: 297 File:tether.c ) 
+		  --> (line: 303 File:tether.c ) 
+		  --> (line: 337 File:tether.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 294 File:tether.c )
+		 conditional free path: 
+		  --> (line: 297 File:tether.c ) 
+		  --> (line: 303 File:tether.c ) 
+		  --> (line: 337 File:tether.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 295 File:tether.c )
+		 conditional free path: 
+		  --> (line: 297 File:tether.c ) 
+		  --> (line: 303 File:tether.c ) 
+		  --> (line: 337 File:tether.c ) 
+
+analysing ./gzip.orig
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 277 File:spec.c )
+analysing ./vortex.orig
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 485 File:core01.c )
+		 conditional free path: 
+		  --> (line: 512 File:core01.c ) 
+		  --> (line: 515 File:core01.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 497 File:core01.c )
+		 conditional free path: 
+		  --> (line: 512 File:core01.c ) 
+		  --> (line: 515 File:core01.c ) 
+
+analysing ./gap.orig
+analysing ./vpr.orig
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 1629 File:place.c ) (FP)
+		 conditional free path: 
+		  --> (line: 1596 File:place.c ) 
+
+[1;35m	 PartialLeak :[1;0m memory allocation at : (line: 1627 File:place.c ) (FP)
+		 conditional free path: 
+		  --> (line: 1596 File:place.c ) 
+
+analysing ./cc1.orig
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 665 File:final.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 844 File:bc-emit.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 995 File:bc-emit.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 601 File:bc-optab.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1235 File:sdbout.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1375 File:sdbout.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 1403 File:sdbout.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 3939 File:optabs.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 629 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 638 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 639 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 548 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 550 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 568 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 568 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 577 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 580 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 582 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 585 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 587 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 295 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 296 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 298 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 300 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 306 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 308 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 2115 File:toplev.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 372 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 374 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 376 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 379 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 387 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 387 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 389 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 389 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 395 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 395 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 401 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 401 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 401 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 428 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 446 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 504 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 149 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 178 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 180 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 183 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 183 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 184 File:c-aux-info.c )
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 233 File:c-aux-info.c )
+analysing ./parser.orig
+analysing ./equake.orig
+analysing ./art.orig
+[1;33m	 NeverFree :[1;0m memory allocation at : (line: 715 File:scanner.c )

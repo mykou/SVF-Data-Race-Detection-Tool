@@ -1,0 +1,475 @@
+total query number: 10
+Answering query for node5	 (1/10) 
+   AT node 5(root 5) state 1
+	inverse through Copy edge
+		@Add AliasSet (10--> 5)
+		#Propagate to node 10(root 5)state 1
+   AT node 10(root 5) state 1
+	inverse through Load, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+	Capture Match StoreSrc node 6 to LoadDst node 10
+		@Add AliasSet (6--> 10)
+	Propagate upward(to S1)  from node 10 to node 6
+		@Add AliasSet (6--> 5)
+		#Propagate to node 6(root 5)state 1
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 5)state 1
+   AT node 6(root 5) state 1
+	inverse through Call edge
+		@Add AliasSet (18--> 5)
+		#Propagate to node 18(root 5)state 1
+	inverse through Call edge
+		@Add AliasSet (20--> 5)
+		#Propagate to node 20(root 5)state 1
+   AT node 20(root 5) state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 5)state 2
+   AT node 21(root 5) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 5)state 3
+   AT node 20(root 5) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		#Propagate to node 6(root 5)state 3
+   AT node 6(root 5) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		#Propagate to node 10(root 5)state 3
+	forward through Store, propagate down
+		#Already visited 7(root 7)state 1
+   AT node 10(root 5) state 3
+	forward through Copy edge
+		#Propagate to node 5(root 5)state 3
+   AT node 5(root 5) state 3
+	forward through Return edge
+	forward through Return edge
+	Pop forward ret, stack size=0
+		@Add AliasSet (24--> 5)
+		#Propagate to node 24(root 5)state 3
+   AT node 24(root 5) state 3
+	forward through Store, propagate down
+		#Propagate to node 16(root 16)state 1
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+   AT node 18(root 5) state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 5)state 2
+   AT node 19(root 5) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 5)state 3
+   AT node 18(root 5) state 3
+	forward through Call edge
+		#Already visited 6(root 5)state 3
+node 5 alias set: { 6  10  18  20  24 }
+Answering query for node6	 (2/10) 
+   AT node 6(root 6) state 1
+	inverse through Call edge
+		@Add AliasSet (18--> 6)
+		#Propagate to node 18(root 6)state 1
+	inverse through Call edge
+		@Add AliasSet (20--> 6)
+		#Propagate to node 20(root 6)state 1
+   AT node 20(root 6) state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 6)state 2
+   AT node 21(root 6) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 6)state 3
+   AT node 20(root 6) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		#Propagate to node 6(root 6)state 3
+   AT node 6(root 6) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		@Add AliasSet (10--> 6)
+		#Propagate to node 10(root 6)state 3
+	forward through Store, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+	Propagate upward(to S3)  from node 6 to node 10
+		#Already visited 10(root 6)state 3
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S3)  from node 6 to node 10
+		#Already visited 10(root 6)state 3
+   AT node 10(root 6) state 3
+	forward through Copy edge
+		@Add AliasSet (5--> 6)
+		#Propagate to node 5(root 6)state 3
+   AT node 5(root 6) state 3
+	forward through Return edge
+	forward through Return edge
+	Pop forward ret, stack size=0
+		@Add AliasSet (24--> 6)
+		#Propagate to node 24(root 6)state 3
+   AT node 24(root 6) state 3
+	forward through Store, propagate down
+		#Propagate to node 16(root 16)state 1
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+   AT node 18(root 6) state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 6)state 2
+   AT node 19(root 6) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 6)state 3
+   AT node 18(root 6) state 3
+	forward through Call edge
+		#Already visited 6(root 6)state 3
+node 6 alias set: { 5  10  18  20  24 }
+Answering query for node7	 (3/10) 
+   AT node 7(root 7) state 1
+		@Add AliasSet (6--> 10)
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+node 7 alias set: {}
+Answering query for node10	 (4/10) 
+   AT node 10(root 10) state 1
+	Alias Match LoadDst node 10 to StoreSrc node 6
+		@Add AliasSet (6--> 10)
+		#Propagate to node 6(root 10)state 1
+	inverse through Load, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 10)state 1
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 10)state 1
+   AT node 6(root 10) state 1
+	inverse through Call edge
+		@Add AliasSet (18--> 10)
+		#Propagate to node 18(root 10)state 1
+	inverse through Call edge
+		@Add AliasSet (20--> 10)
+		#Propagate to node 20(root 10)state 1
+   AT node 20(root 10) state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 10)state 2
+   AT node 21(root 10) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 10)state 3
+   AT node 20(root 10) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		#Propagate to node 6(root 10)state 3
+   AT node 6(root 10) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		#Propagate to node 10(root 10)state 3
+	forward through Store, propagate down
+		#Already visited 7(root 7)state 1
+   AT node 10(root 10) state 3
+	forward through Copy edge
+		@Add AliasSet (5--> 10)
+		#Propagate to node 5(root 10)state 3
+   AT node 5(root 10) state 3
+	forward through Return edge
+	forward through Return edge
+	Pop forward ret, stack size=0
+		@Add AliasSet (24--> 10)
+		#Propagate to node 24(root 10)state 3
+   AT node 24(root 10) state 3
+	forward through Store, propagate down
+		#Propagate to node 16(root 16)state 1
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+   AT node 18(root 10) state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 10)state 2
+   AT node 19(root 10) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 10)state 3
+   AT node 18(root 10) state 3
+	forward through Call edge
+		#Already visited 6(root 10)state 3
+node 10 alias set: { 5  6  18  20  24 }
+Answering query for node14	 (5/10) 
+   AT node 14(root 14) state 1
+	inverse through Addr edge
+		#Propagate to node 15(root 14)state 2
+   AT node 15(root 14) state 2
+	Sit at Addr node 15
+		#Propagate to node 14(root 14)state 3
+   AT node 14(root 14) state 3
+node 14 alias set: {}
+Answering query for node16	 (6/10) 
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+node 16 alias set: {}
+Answering query for node18	 (7/10) 
+   AT node 18(root 18) state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		@Add AliasSet (6--> 18)
+		#Propagate to node 6(root 18)state 3
+   AT node 6(root 18) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		@Add AliasSet (10--> 18)
+		#Propagate to node 10(root 18)state 3
+	forward through Store, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+		@Add AliasSet (6--> 10)
+	Propagate upward(to S3)  from node 6 to node 10
+		#Already visited 10(root 18)state 3
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S3)  from node 6 to node 10
+		#Already visited 10(root 18)state 3
+   AT node 10(root 18) state 3
+	forward through Copy edge
+		@Add AliasSet (5--> 18)
+		#Propagate to node 5(root 18)state 3
+   AT node 5(root 18) state 3
+	forward through Return edge
+	Pop forward ret, stack size=0
+		@Add AliasSet (22--> 18)
+		#Propagate to node 22(root 18)state 3
+	forward through Return edge
+   AT node 22(root 18) state 3
+	forward through Store, propagate down
+		#Propagate to node 14(root 14)state 1
+   AT node 14(root 14) state 1
+	inverse through Addr edge
+		#Propagate to node 15(root 14)state 2
+   AT node 15(root 14) state 2
+	Sit at Addr node 15
+		#Propagate to node 14(root 14)state 3
+   AT node 14(root 14) state 3
+node 18 alias set: { 5  6  10  22 }
+Answering query for node20	 (8/10) 
+   AT node 20(root 20) state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		@Add AliasSet (6--> 20)
+		#Propagate to node 6(root 20)state 3
+   AT node 6(root 20) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		@Add AliasSet (10--> 20)
+		#Propagate to node 10(root 20)state 3
+	forward through Store, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+		@Add AliasSet (6--> 10)
+	Propagate upward(to S3)  from node 6 to node 10
+		#Already visited 10(root 20)state 3
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S3)  from node 6 to node 10
+		#Already visited 10(root 20)state 3
+   AT node 10(root 20) state 3
+	forward through Copy edge
+		@Add AliasSet (5--> 20)
+		#Propagate to node 5(root 20)state 3
+   AT node 5(root 20) state 3
+	forward through Return edge
+	forward through Return edge
+	Pop forward ret, stack size=0
+		@Add AliasSet (24--> 20)
+		#Propagate to node 24(root 20)state 3
+   AT node 24(root 20) state 3
+	forward through Store, propagate down
+		#Propagate to node 16(root 16)state 1
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+node 20 alias set: { 5  6  10  24 }
+Answering query for node22	 (9/10) 
+   AT node 22(root 22) state 1
+	inverse through Return edge
+	Push inverse ret, stack size=1
+		@Add AliasSet (5--> 22)
+		#Propagate to node 5(root 22)state 1
+   AT node 5(root 22) state 1
+	inverse through Copy edge
+		@Add AliasSet (10--> 22)
+		#Propagate to node 10(root 22)state 1
+   AT node 10(root 22) state 1
+	Alias Match LoadDst node 10 to StoreSrc node 6
+		@Add AliasSet (6--> 22)
+		#Propagate to node 6(root 22)state 1
+	inverse through Load, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+		@Add AliasSet (6--> 10)
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 22)state 1
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 22)state 1
+   AT node 6(root 22) state 1
+	inverse through Call edge
+	Pop inverse call, stack size=0
+		@Add AliasSet (18--> 22)
+		#Propagate to node 18(root 22)state 1
+	inverse through Call edge
+   AT node 18(root 22) state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 22)state 2
+   AT node 19(root 22) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 22)state 3
+   AT node 18(root 22) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		#Propagate to node 6(root 22)state 3
+   AT node 6(root 22) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		#Propagate to node 10(root 22)state 3
+	forward through Store, propagate down
+		#Already visited 7(root 7)state 1
+   AT node 10(root 22) state 3
+	forward through Copy edge
+		#Propagate to node 5(root 22)state 3
+   AT node 5(root 22) state 3
+	forward through Return edge
+	Pop forward ret, stack size=0
+		#Propagate to node 22(root 22)state 3
+	forward through Return edge
+   AT node 22(root 22) state 3
+	forward through Store, propagate down
+		#Propagate to node 14(root 14)state 1
+   AT node 14(root 14) state 1
+	inverse through Addr edge
+		#Propagate to node 15(root 14)state 2
+   AT node 15(root 14) state 2
+	Sit at Addr node 15
+		#Propagate to node 14(root 14)state 3
+   AT node 14(root 14) state 3
+node 22 alias set: { 5  6  10  18 }
+Answering query for node24	 (10/10) 
+   AT node 24(root 24) state 1
+	inverse through Return edge
+	Push inverse ret, stack size=1
+		@Add AliasSet (5--> 24)
+		#Propagate to node 5(root 24)state 1
+   AT node 5(root 24) state 1
+	inverse through Copy edge
+		@Add AliasSet (10--> 24)
+		#Propagate to node 10(root 24)state 1
+   AT node 10(root 24) state 1
+	Alias Match LoadDst node 10 to StoreSrc node 6
+		@Add AliasSet (6--> 24)
+		#Propagate to node 6(root 24)state 1
+	inverse through Load, propagate down
+		#Propagate to node 7(root 7)state 1
+   AT node 7(root 7) state 1
+		@Add AliasSet (6--> 10)
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 24)state 1
+	inverse through Addr edge
+		#Propagate to node 8(root 7)state 2
+   AT node 8(root 7) state 2
+	Sit at Addr node 8
+		#Propagate to node 7(root 7)state 3
+   AT node 7(root 7) state 3
+	Propagate upward(to S1)  from node 10 to node 6
+		#Already visited 6(root 24)state 1
+   AT node 6(root 24) state 1
+	inverse through Call edge
+	inverse through Call edge
+	Pop inverse call, stack size=0
+		@Add AliasSet (20--> 24)
+		#Propagate to node 20(root 24)state 1
+   AT node 20(root 24) state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 24)state 2
+   AT node 21(root 24) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 24)state 3
+   AT node 20(root 24) state 3
+	forward through Call edge
+	Push forward call, stack size=1
+		#Propagate to node 6(root 24)state 3
+   AT node 6(root 24) state 3
+	Alias  Match StoreSrc node 6 to LoadDst node 10
+		#Propagate to node 10(root 24)state 3
+	forward through Store, propagate down
+		#Already visited 7(root 7)state 1
+   AT node 10(root 24) state 3
+	forward through Copy edge
+		#Propagate to node 5(root 24)state 3
+   AT node 5(root 24) state 3
+	forward through Return edge
+	forward through Return edge
+	Pop forward ret, stack size=0
+		#Propagate to node 24(root 24)state 3
+   AT node 24(root 24) state 3
+	forward through Store, propagate down
+		#Propagate to node 16(root 16)state 1
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+node 24 alias set: { 5  6  10  20 }

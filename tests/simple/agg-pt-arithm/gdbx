@@ -1,0 +1,3 @@
+file dvf
+b main
+r -fdaa -debug-only=dda case.c.bc

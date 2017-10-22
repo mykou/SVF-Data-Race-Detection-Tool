@@ -1,0 +1,7 @@
+void main(){
+
+int *s,t;
+	s = &t;
+	*s = 10;
+
+}

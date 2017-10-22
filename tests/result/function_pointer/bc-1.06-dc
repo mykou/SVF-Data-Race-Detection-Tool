@@ -1,0 +1,100 @@
+﻿=========================================================================================
+Indirect call sites: 27
+=========================================================================================
+Call hierarchy:
+	main()
+		dc_evalfile(stdin);						/// line 179, dc.c
+			dc_func(c, peekc, negcmp)			/// line 629, eval.c
+param			dc_binop(dc_add, dc_scale);		/// line 165, eval.c
+param			dc_binop(dc_sub, dc_scale);		/// line 168, eval.c
+param			dc_binop(dc_mul, dc_scale);		/// line 171, eval.c
+param			dc_binop(dc_div, dc_scale);		/// line 174, eval.c
+param			dc_binop(dc_rem, dc_scale);		/// line 178, eval.c
+param			dc_binop2(dc_divrem, dc_scale);	/// line 185, eval.c
+CS1					(*op)(...)					/// line 140, stack.c
+param			dc_triop(dc_modexp, dc_scale);	/// line 198, eval.c
+CS2					(*op)(...)					/// line 214, stack.c
+param			dc_binop(dc_exp, dc_scale);		/// line 201, eval.c
+
+				dc_binop(op, kscale)
+CS3					(*op)(a.v.number, b.v.number, kscale, &r.v.number)	/// line 100, stack.c
+-------------------------------------------------------
+NodeID: 1857
+CallSite:   %call18 = call i32 %op(%struct.dc_number* %10, %struct.dc_number* %11, i32 %kscale, %struct.dc_number** %number15, %struct.dc_number** %number17) #6, !dbg !1399    Location: ln: 140 fl: stack.c    with Targets:
+        dc_divrem
+
+NodeID: 1662
+CallSite:   %call16 = call i32 %op(%struct.dc_number* %10, %struct.dc_number* %11, i32 %kscale, %struct.dc_number** %number15) #6, !dbg !1398   Location: ln: 100 fl: stack.c    with Targets:
+        dc_add
+        dc_sub
+        dc_mul
+        dc_div
+        dc_rem
+        dc_exp
+
+NodeID: 2055
+CallSite:   %call29 = call i32 %op(%struct.dc_number* %12, %struct.dc_number* %13, %struct.dc_number* %14, i32 %kscale, %struct.dc_number** %number28) #6, !dbg !1400   Location: ln: 214 fl: stack.c    with Targets:
+        dc_modexp
+=========================================================================================
+Call hierarchy:
+	main()
+		dc_evalstr(string)											/// line 151, dc.c
+param		dc_push(dc_getnum(input_str, dc_ibase, &peekc));		/// line 566, eval.c
+		dc_evalfile(stdin)											/// line 179, dc.c
+param		dc_push(dc_getnum(input_fil, dc_ibase, &peekc));		/// line 651, eval.c
+
+
+				dc_getnum(input, ibase, readahead)
+CS1-7				c = (*input)();									/// line 294, numeric.c
+-------------------------------------------------------
+NodeID: 2969
+CallSite:   %call7 = call i32 %input() #6, !dbg !1399   Location: ln: 294 fl: numeric.c  with Targets:
+NodeID: 2969
+CallSite:   %call9 = call i32 %input() #6, !dbg !1402   Location: ln: 296 fl: numeric.c  with Targets:
+NodeID: 2969
+CallSite:   %call13 = call i32 %input() #6, !dbg !1406  Location: ln: 299 fl: numeric.c  with Targets:
+NodeID: 2969
+CallSite:   %call17 = call i32 %input() #6, !dbg !1408  Location: ln: 301 fl: numeric.c  with Targets:
+NodeID: 2969
+CallSite:   %call27 = call i32 %input() #6, !dbg !1412  Location: ln: 304 fl: numeric.c  with Targets:
+NodeID: 2969
+CallSite:   %call46 = call i32 %input() #6, !dbg !1419  Location: ln: 312 fl: numeric.c  with Targets:
+NodeID: 2969
+CallSite:   %call53 = call i32 %input() #6, !dbg !1433  Location: ln: 324 fl: numeric.c  with Targets:
+        input_str
+        input_fil
+=========================================================================================
+Call hierarchy:
+	main()
+		open_new_file ()										/// line 233, main.c
+			load_code (*mstr);									/// line 303, main.c
+				execute ();										/// line 337, main.c
+		yyparse ();												/// line 259, main.c
+			run_code ();										/// line 1010, bc.c
+				execute ();										/// line 296, util.c
+param				bc_out_num (ex_stack->s_num, o_base, out_char, std_only);	/// line 258, execute.c
+						bc_out_long (..., out_char);			/// line 1544, number.c
+CS1-10						(*out_char) (' ');					/// line 1542, number.c
+-------------------------------------------------------
+NodeID: 7992
+CallSite:   call void %out_char(i32 46) #6, !dbg !1547  Location: ln: 1552 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 %conv95) #6, !dbg !1577     Location: ln: 1561 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 45) #6, !dbg !1385  Location: ln: 1472 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 48) #6, !dbg !1399  Location: ln: 1476 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 %add) #6, !dbg !1406        Location: ln: 1484 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 48) #6, !dbg !1417  Location: ln: 1489 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 46) #6, !dbg !1419  Location: ln: 1494 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 %add31) #6, !dbg !1423      Location: ln: 1496 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 48) #6, !dbg !1433  Location: ln: 1503 fl: number.c  with Targets:
+NodeID: 7992
+CallSite:   call void %out_char(i32 %conv69) #6, !dbg !1524     Location: ln: 1542 fl: number.c  with Targets:
+        out_char
+=========================================================================================

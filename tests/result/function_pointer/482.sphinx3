@@ -1,0 +1,65 @@
+﻿====================================================================================
+Indirect call sites: 8 (only two has targets. Others are inside dead function)
+====================================================================================
+Call hierarchy:
+	main()
+		live_initialize_decoder(argsfile);			/// line 133, spec_main_live_pretend.c
+			kb_init(&live_kb);						/// line 89,  live.c
+				kb->kbcore = kbcore_init(...);		/// line 87,  kb.c
+					kb->fcb = feat_init (...);		/// line 118, kbcore.c
+init1					fcb->compute_feat = feat_s2_4x_cep2feat;		/// line 659, feat.c
+init2					fcb->compute_feat = feat_s3_1x39_cep2feat;		/// line 668, feat.c
+init3					fcb->compute_feat = feat_1s_c_d_dd_cep2feat;	/// line 676, feat.c
+init4					fcb->compute_feat = feat_s3_cep_dcep;			/// line 693, feat.c
+init5					fcb->compute_feat = feat_s3_cep;				/// line 710, feat.c
+						return fcb;										/// line 768, feat.c
+			kb = &live_kb;							/// line 90,  live.c
+			kbcore = kb->kbcore;					/// Global variable!!! line 91,  live.c
+		... = live_utt_decode_block(...);			/// line 180, spec_main_live_pretend.c
+			... = feat_s2mfc2feat_block(kbcore->fcb, ...);				/// line 269, live.c
+CS1				fcb->compute_feat(fcb, tmpcepbuf+win,ofeat[i]);			/// line 1047, feat.c
+CS2				fcb->compute_feat(fcb, cepbuf+curpos, ofeat[i]);		/// line 1049, feat.c
+===============================================================================
+Output from analysis.
+NodeID: 18985
+CallSite:   call void %141(%struct.feat_s* %142, float** %add.ptr, float** %147), !dbg !7364    Location: ln: 1047 fl: feat.c    with Targets:
+        feat_1s_c_d_dd_cep2feat
+        feat_s2_4x_cep2feat
+        feat_s3_1x39_cep2feat
+        feat_s3_cep_dcep
+        feat_s3_cep
+
+NodeID: 19000
+CallSite:   call void %149(%struct.feat_s* %150, float** %add.ptr135, float** %155), !dbg !7366 Location: ln: 1049 fl: feat.c    with Targets:
+        feat_1s_c_d_dd_cep2feat
+        feat_s2_4x_cep2feat
+        feat_s3_1x39_cep2feat
+        feat_s3_cep_dcep
+        feat_s3_cep
+====================================================================================
+All other indirect call sites are inside dead function, so they don't have targets.
+
+Output from analysis.
+NodeID: 18561
+CallSite:   call void %139(%struct.feat_s* %140, float** %add.ptr130, float** %146), !dbg !7360 Location: ln: 909 fl: feat.c
+        !!!has no targets!!!
+
+NodeID: 19848
+CallSite:   call void %2(i8* %4), !dbg !7277    Location: ln: 185 fl: glist.c
+        !!!has no targets!!!
+
+NodeID: 19883
+CallSite:   call void %2(i32 %4), !dbg !7277    Location: ln: 194 fl: glist.c
+        !!!has no targets!!!
+
+NodeID: 19918
+CallSite:   call void %2(i32 %4), !dbg !7277    Location: ln: 203 fl: glist.c
+        !!!has no targets!!!
+
+NodeID: 19953
+CallSite:   call void %2(float %4), !dbg !7277  Location: ln: 212 fl: glist.c
+        !!!has no targets!!!
+
+NodeID: 19988
+CallSite:   call void %2(double %4), !dbg !7277 Location: ln: 221 fl: glist.c
+        !!!has no targets!!!

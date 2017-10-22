@@ -1,0 +1,25 @@
+HOW TO INSTALL INTEL TBB
+
+1. Download from https://www.threadingbuildingblocks.org/download
+
+2. unzip to folder pta/tbb
+
+3. Edit pta/tbb/bin/tbbvars.sh line 36
+   export TBBROOT=YOURPATH/pta/tbb
+
+4. open file pta/tbb/include/tbb/concurrent_hash_map.h
+   comment line 1269-1271
+   1269         //tbb::internal::runtime_warning(
+   1270         //    "Performance is not optimal because the hash function produces bad randomness in lower bits in %s.\nSize: %d  Empties: %d  Overlaps     : %d",
+   1271         //    typeid(*this).name(), current_size, empty_buckets, overpopulated_buckets );
+   
+  comment line 1230-1322
+   1320         //tbb::internal::runtime_warning(
+   1321         //    "Performance is not optimal because the hash function produces bad randomness in lower bits in %s.\nSize: %d  Empties: %d  Overlaps     : %d",
+   1322         //    typeid(*this).name(), current_size, empty_buckets, overpopulated_buckets );
+
+5. cd pta/tbb/bin/
+   . ./tbbvars.sh intel64
+
+6. cd pta
+   make

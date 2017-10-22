@@ -1,0 +1,3 @@
+file ../../Debug+Asserts/bin/MemSafeC 
+b main
+r case2.bc

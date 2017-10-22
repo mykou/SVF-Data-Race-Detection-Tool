@@ -1,0 +1,3 @@
+file dvf
+b main
+r -debug case6.bc

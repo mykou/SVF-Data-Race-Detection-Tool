@@ -1,0 +1,68 @@
+graph:
+{
+title: "Call Graph VCG" 
+color: lightgrey 
+width: 633 
+height: 808 
+finetuning: no 
+xspace: 20
+yspace: 25
+nearedges: no 
+splines: no 
+port_sharing: yes 
+priority_phase: no 
+display_edge_labels: yes
+infoname 1: "CallGraph" 
+node:
+{
+title: "0" 
+label: "gnu_dev_major" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "1" 
+label: "gnu_dev_minor" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "2" 
+label: "gnu_dev_makedev" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "4" 
+label: "main" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "3" 
+label: "addemup..a_outB" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+edge:
+{
+sourcename: "4" 
+targetname: "3" 
+class: 0
+color: black
+}
+}

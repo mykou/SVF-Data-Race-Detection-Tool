@@ -1,0 +1,3 @@
+file opt
+b main
+r -basicaa -tbaa -count-aa -aa-eval case.c.bc

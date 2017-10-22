@@ -1,0 +1,1692 @@
+graph:
+{
+title: "ConstraintGraph VCG" 
+color: lightgrey 
+width: 633 
+height: 808 
+finetuning: no 
+xspace: 20
+yspace: 25
+nearedges: no 
+splines: no 
+port_sharing: yes 
+priority_phase: no 
+display_edge_labels: yes
+late_edge_labels: yes
+infoname 1: "ConstraintGraph" 
+node:
+{
+title: "2" 
+label: "2:_globalCGBlackHole 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 2 sym: _globalCGBlackHole 	<1,65> Variable of type .predef_U8 (#9, U8)
+		Address: 0(_globalCGBlackHole<1,65>) Alignment: 8bytes
+		Flags:	0x4 not_used, XINTERNAL
+		Sclass: UGLOBAL
+cg_st_idx: 16641, offset: 0
+ ty_idx: 0
+GBL:  HZ:  DN: 
+nextCGNodeId: null parent: 2 inKCycle: 0
+CGNode flags: [ ADDRTAKEN ]
+StInfo:
+  varSize: 8 ST flags: [ GLOBAL CI ] firstCGNodeId: 2 numOffsets: 1 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "1" 
+label: "1:_globalCGNotAPTR 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 1 sym: _globalCGNotAPTR 	<1,64> Variable of type .predef_U8 (#9, U8)
+		Address: 0(_globalCGNotAPTR<1,64>) Alignment: 8bytes
+		Flags:	0x4 not_used, XINTERNAL
+		Sclass: UGLOBAL
+cg_st_idx: 16385, offset: 0
+ ty_idx: 0
+GBL:  HZ:  DN: 
+nextCGNodeId: null parent: 1 inKCycle: 0
+CGNode flags: [ !PTR ]
+StInfo:
+  varSize: 8 ST flags: [ GLOBAL CI ] firstCGNodeId: 1 numOffsets: 1 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+graph:
+{
+title: "aliasing.base03.o(0),complex(0)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "15" 
+label: "15:_temp__cgHeap4 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 15 sym:  <file:0 pu:0 st_idx:2050>
+cg_st_idx: 2050, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 15 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 0 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 15 numOffsets: 1 modulus: 1
+  type: .predef_V (#20 KIND_VOID)
+" 
+}
+node:
+{
+title: "14" 
+label: "14:.preg_U8 440" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 14 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 440 preg: 55
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 14 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "13" 
+label: "13:.preg_U8 432" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 13 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 432 preg: 54
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 13 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "12" 
+label: "12:.preg_U8 424" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 12 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 424 preg: 53
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 5 inKCycle: 0
+CGNode flags: [ MERGED ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "11" 
+label: "11:.preg_U8 416" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 11 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 416 preg: 52
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 11 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "10" 
+label: "10:.preg_U8 408" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 10 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 408 preg: 51
+ ty_idx: 13315
+GBL: 2 HZ: 15 DN: 
+nextCGNodeId: null parent: 10 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "9" 
+label: "9:.preg_U8 400" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 9 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 400 preg: 50
+ ty_idx: 13571
+GBL: 2 HZ: 7 DN: 
+nextCGNodeId: null parent: 9 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "8" 
+label: "8:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 8 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 2305, offset: 392 preg: 49
+ ty_idx: 13571
+GBL: 2 HZ: 6 DN: 
+nextCGNodeId: null parent: 8 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "7" 
+label: "7:_temp__cgHeap3 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 7 sym:  <file:0 pu:0 st_idx:1794>
+cg_st_idx: 1794, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 7 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 8 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 7 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#52 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "6" 
+label: "6:_temp__cgHeap2 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 6 sym:  <file:0 pu:0 st_idx:1538>
+cg_st_idx: 1538, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 6 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 8 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 6 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#52 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "5" 
+label: "5:tmp 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 5 sym:  <file:0 pu:0 st_idx:770>
+cg_st_idx: 770, offset: 0
+ ty_idx: 13315
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 5 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 5 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#52 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "4" 
+label: "4:y 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 4 sym:  <file:0 pu:0 st_idx:514>
+cg_st_idx: 514, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 4 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 4 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#54 KIND_POINTER***)
+" 
+}
+node:
+{
+title: "3" 
+label: "3:x 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 3 sym:  <file:0 pu:0 st_idx:258>
+cg_st_idx: 258, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 3 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 3 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#54 KIND_POINTER***)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),foo(1)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "20" 
+label: "20:.preg_U8 400" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 20 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 4294969601, offset: 400 preg: 50
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 20 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "19" 
+label: "19:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 19 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 4294969601, offset: 392 preg: 49
+ ty_idx: 13315
+GBL: 2 HZ: 18 DN: 
+nextCGNodeId: null parent: 19 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "18" 
+label: "18:_temp__cgHeap7 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 18 sym:  <file:0 pu:1 st_idx:1282>
+cg_st_idx: 4294968578, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 18 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 0 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 18 numOffsets: 1 modulus: 1
+  type: .predef_V (#20 KIND_VOID)
+" 
+}
+node:
+{
+title: "17" 
+label: "17:b 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 17 sym:  <file:0 pu:1 st_idx:514>
+cg_st_idx: 4294967810, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 17 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 17 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+node:
+{
+title: "16" 
+label: "16:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 16 sym:  <file:0 pu:1 st_idx:258>
+cg_st_idx: 4294967554, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 16 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 16 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),bar(2)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "23" 
+label: "23:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 23 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 8589936897, offset: 392 preg: 49
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 23 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "22" 
+label: "22:b 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 22 sym:  <file:0 pu:2 st_idx:514>
+cg_st_idx: 8589935106, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 22 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 22 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+node:
+{
+title: "21" 
+label: "21:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 21 sym:  <file:0 pu:2 st_idx:258>
+cg_st_idx: 8589934850, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 21 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 21 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),baz_wrap1(4)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "28" 
+label: "28:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 28 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 17179871489, offset: 392 preg: 49
+ ty_idx: 13315
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 27 inKCycle: 0
+CGNode flags: [ ARETURN MERGED PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "27" 
+label: "27:.result_decl_1907 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 27 sym:  <file:0 pu:4 st_idx:514>
+cg_st_idx: 17179869698, offset: 0
+ ty_idx: 13315
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 27 inKCycle: 0
+CGNode flags: [ FRETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 27 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#52 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "26" 
+label: "26:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 26 sym:  <file:0 pu:4 st_idx:258>
+cg_st_idx: 17179869442, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 26 inKCycle: 0
+CGNode flags: [ FPARAM APARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 26 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),baz(3)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "25" 
+label: "25:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 25 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 12884904193, offset: 392 preg: 49
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 25 inKCycle: 0
+CGNode flags: [ FRETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "24" 
+label: "24:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 24 sym:  <file:0 pu:3 st_idx:258>
+cg_st_idx: 12884902146, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 24 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 24 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),baz_wrap2(5)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "34" 
+label: "34:.preg_U8 400" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 34 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 21474838785, offset: 400 preg: 50
+ ty_idx: 13315
+GBL:  HZ: 32 DN: 
+nextCGNodeId: null parent: 34 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "33" 
+label: "33:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 33 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 21474838785, offset: 392 preg: 49
+ ty_idx: 13315
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 33 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "32" 
+label: "32:_temp__cgHeap16 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 32 sym:  <file:0 pu:5 st_idx:1538>
+cg_st_idx: 21474838018, offset: 0
+ ty_idx: 0
+GBL:  HZ:  DN: 
+nextCGNodeId: null parent: 32 inKCycle: 0
+CGNode flags: [ ADDRTAKEN ]
+StInfo:
+  varSize: 0 ST flags: [ HEAP ] firstCGNodeId: 32 numOffsets: 1 modulus: 1
+  type: .predef_V (#20 KIND_VOID)
+" 
+}
+node:
+{
+title: "31" 
+label: "31:.result_decl_1913 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 31 sym:  <file:0 pu:5 st_idx:770>
+cg_st_idx: 21474837250, offset: 0
+ ty_idx: 13315
+GBL: 2 HZ: 32 DN: 
+nextCGNodeId: null parent: 31 inKCycle: 0
+CGNode flags: [ FRETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 31 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#52 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "30" 
+label: "30:b 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 30 sym:  <file:0 pu:5 st_idx:514>
+cg_st_idx: 21474836994, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 30 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 4 ST flags: [ ] firstCGNodeId: 30 numOffsets: 1 modulus: 1
+  type: .predef_I4 (#4 I4)
+" 
+}
+node:
+{
+title: "29" 
+label: "29:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 29 sym:  <file:0 pu:5 st_idx:258>
+cg_st_idx: 21474836738, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 29 inKCycle: 0
+CGNode flags: [ FPARAM APARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 29 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#53 KIND_POINTER**)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),intcpy(6)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "37" 
+label: "37:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 37 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 25769806081, offset: 392 preg: 49
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 37 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "36" 
+label: "36:b 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 36 sym:  <file:0 pu:6 st_idx:514>
+cg_st_idx: 25769804290, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 36 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 36 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#60 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "35" 
+label: "35:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 35 sym:  <file:0 pu:6 st_idx:258>
+cg_st_idx: 25769804034, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 35 inKCycle: 0
+CGNode flags: [ FPARAM FRETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 35 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#60 KIND_POINTER*)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),intcpy_wrap(7)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "41" 
+label: "41:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 41 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 30064773377, offset: 392 preg: 49
+ ty_idx: 15363
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 41 inKCycle: 0
+CGNode flags: [ ARETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "40" 
+label: "40:c 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 40 sym:  <file:0 pu:7 st_idx:770>
+cg_st_idx: 30064771842, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 40 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 40 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#62 KIND_POINTER**)
+" 
+}
+node:
+{
+title: "39" 
+label: "39:b 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 39 sym:  <file:0 pu:7 st_idx:514>
+cg_st_idx: 30064771586, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 39 inKCycle: 0
+CGNode flags: [ FPARAM APARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 39 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#60 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "38" 
+label: "38:a 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 38 sym:  <file:0 pu:7 st_idx:258>
+cg_st_idx: 30064771330, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 38 inKCycle: 0
+CGNode flags: [ FPARAM APARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 38 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#60 KIND_POINTER*)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),offset(8)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "43" 
+label: "43:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 43 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 34359740673, offset: 392 preg: 49
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 43 inKCycle: 0
+CGNode flags: [ FRETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "42" 
+label: "42:s 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 42 sym:  <file:0 pu:8 st_idx:258>
+cg_st_idx: 34359738626, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 42 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 42 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#65 KIND_POINTER*)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),offset_wrap(9)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "46" 
+label: "46:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 46 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 38654707969, offset: 392 preg: 49
+ ty_idx: 15363
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 45 inKCycle: 0
+CGNode flags: [ ARETURN MERGED PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "45" 
+label: "45:.result_decl_1939 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 45 sym:  <file:0 pu:9 st_idx:514>
+cg_st_idx: 38654706178, offset: 0
+ ty_idx: 15363
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 45 inKCycle: 0
+CGNode flags: [ FRETURN PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 45 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#60 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "44" 
+label: "44:s 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 44 sym:  <file:0 pu:9 st_idx:258>
+cg_st_idx: 38654705922, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 44 inKCycle: 0
+CGNode flags: [ FPARAM APARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 44 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#65 KIND_POINTER*)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),multiple_one(10)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "54" 
+label: "54:.preg_U8 408" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 54 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 42949675265, offset: 408 preg: 51
+ ty_idx: 0
+GBL: 2 HZ: 51 DN: 
+nextCGNodeId: null parent: 54 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "53" 
+label: "53:.preg_U8 400" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 53 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 42949675265, offset: 400 preg: 50
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 53 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "52" 
+label: "52:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 52 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 42949675265, offset: 392 preg: 49
+ ty_idx: 16643
+GBL: 2 HZ: 50 DN: 
+nextCGNodeId: null parent: 49 inKCycle: 0
+CGNode flags: [ ARETURN MERGED PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "51" 
+label: "51:_temp__cgHeap27 8" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 51 sym:  <file:0 pu:10 st_idx:1538>
+cg_st_idx: 42949674498, offset: 8
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 51 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 16 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 50 numOffsets: 2 modulus: 16
+  type: _str (#64 KIND_STRUCT)
+H" 
+}
+node:
+{
+title: "50" 
+label: "50:_temp__cgHeap27 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 50 sym:  <file:0 pu:10 st_idx:1538>
+cg_st_idx: 42949674498, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: 51 parent: 50 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 16 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 50 numOffsets: 2 modulus: 16
+  type: _str (#64 KIND_STRUCT)
+" 
+}
+node:
+{
+title: "49" 
+label: "49:tmp 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 49 sym:  <file:0 pu:10 st_idx:770>
+cg_st_idx: 42949673730, offset: 0
+ ty_idx: 16643
+GBL: 2 HZ: 50 DN: 
+nextCGNodeId: null parent: 49 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 49 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#65 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "48" 
+label: "48:parentb 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 48 sym:  <file:0 pu:10 st_idx:514>
+cg_st_idx: 42949673474, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 48 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 48 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#62 KIND_POINTER**)
+" 
+}
+node:
+{
+title: "47" 
+label: "47:parent 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 47 sym:  <file:0 pu:10 st_idx:258>
+cg_st_idx: 42949673218, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 47 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 47 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#69 KIND_POINTER***)
+" 
+}
+}
+graph:
+{
+title: "aliasing.base03.o(0),multiple_two(11)" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "61" 
+label: "61:.preg_U8 400" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 61 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 47244642561, offset: 400 preg: 50
+ ty_idx: 0
+GBL: 2 HZ: 59 DN: 
+nextCGNodeId: null parent: 61 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "60" 
+label: "60:.preg_U8 392" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 60 sym: .preg_U8 	<1,9> Pseudo-Register of type .predef_U8 (#9, U8)
+		Address: 0(.preg_U8<1,9>) Alignment: 8bytes
+		Flags:	0x0, XLOCAL
+		Sclass: REG
+cg_st_idx: 47244642561, offset: 392 preg: 49
+ ty_idx: 16643
+GBL: 2 HZ: 58 DN: 
+nextCGNodeId: null parent: 57 inKCycle: 0
+CGNode flags: [ ARETURN MERGED PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ TEMP ] firstCGNodeId: null numOffsets: 0 modulus: 1
+  type: .predef_U8 (#9 U8)
+" 
+}
+node:
+{
+title: "59" 
+label: "59:_temp__cgHeap30 8" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 59 sym:  <file:0 pu:11 st_idx:1538>
+cg_st_idx: 47244641794, offset: 8
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 59 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 16 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 58 numOffsets: 2 modulus: 16
+  type: _str (#64 KIND_STRUCT)
+" 
+}
+node:
+{
+title: "58" 
+label: "58:_temp__cgHeap30 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 58 sym:  <file:0 pu:11 st_idx:1538>
+cg_st_idx: 47244641794, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: 59 parent: 58 inKCycle: 0
+CGNode flags: [ PTSMOD ADDRTAKEN ]
+StInfo:
+  varSize: 16 ST flags: [ HEAP ESCLCL ] firstCGNodeId: 58 numOffsets: 2 modulus: 16
+  type: _str (#64 KIND_STRUCT)
+" 
+}
+node:
+{
+title: "57" 
+label: "57:tmp 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 57 sym:  <file:0 pu:11 st_idx:770>
+cg_st_idx: 47244641026, offset: 0
+ ty_idx: 16643
+GBL: 2 HZ: 58 DN: 
+nextCGNodeId: null parent: 57 inKCycle: 0
+CGNode flags: [ PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 57 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#65 KIND_POINTER*)
+" 
+}
+node:
+{
+title: "56" 
+label: "56:parentb 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 56 sym:  <file:0 pu:11 st_idx:514>
+cg_st_idx: 47244640770, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 56 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 56 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#62 KIND_POINTER**)
+" 
+}
+node:
+{
+title: "55" 
+label: "55:parenta 0" 
+color: khaki 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+info1: "CGNodeId: 55 sym:  <file:0 pu:11 st_idx:258>
+cg_st_idx: 47244640514, offset: 0
+ ty_idx: 0
+GBL: 2 HZ:  DN: 
+nextCGNodeId: null parent: 55 inKCycle: 0
+CGNode flags: [ FPARAM PTSMOD ]
+StInfo:
+  varSize: 8 ST flags: [ ] firstCGNodeId: 55 numOffsets: 1 modulus: 1
+  type: anon_ptr. (#71 KIND_POINTER***)
+" 
+}
+}
+classname 5: "Offset"
+classname 4: "Parent"
+classname 3: "Store"
+classname 2: "Load"
+classname 1: "Copy/Skew"
+edge:
+{
+sourcename: "61" 
+targetname: "56" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "60" 
+targetname: "57" 
+class: 4
+color: green
+linestyle: dotted
+}
+edge:
+{
+sourcename: "58" 
+targetname: "59" 
+class: 5
+color: purple
+linestyle: dashed
+}
+edge:
+{
+sourcename: "57" 
+targetname: "55" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "57" 
+targetname: "61" 
+class: 1
+color: black
+label: " HZ +8" 
+}
+edge:
+{
+sourcename: "54" 
+targetname: "48" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "52" 
+targetname: "49" 
+class: 4
+color: green
+linestyle: dotted
+}
+edge:
+{
+sourcename: "50" 
+targetname: "51" 
+class: 5
+color: purple
+linestyle: dashed
+}
+edge:
+{
+sourcename: "49" 
+targetname: "53" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "49" 
+targetname: "54" 
+class: 1
+color: black
+label: " HZ +8" 
+}
+edge:
+{
+sourcename: "47" 
+targetname: "53" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "46" 
+targetname: "45" 
+class: 4
+color: green
+linestyle: dotted
+}
+edge:
+{
+sourcename: "44" 
+targetname: "42" 
+class: 1
+color: black
+label: " DN 8" 
+}
+edge:
+{
+sourcename: "43" 
+targetname: "45" 
+class: 1
+color: black
+label: " UP 8" 
+}
+edge:
+{
+sourcename: "42" 
+targetname: "43" 
+class: 1
+color: black
+label: " HZ +8" 
+}
+edge:
+{
+sourcename: "41" 
+targetname: "40" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "39" 
+targetname: "36" 
+class: 1
+color: black
+label: " DN 8" 
+}
+edge:
+{
+sourcename: "38" 
+targetname: "35" 
+class: 1
+color: black
+label: " DN 8" 
+}
+edge:
+{
+sourcename: "37" 
+targetname: "35" 
+class: 3
+color: blue
+label: "# HZ 4" 
+}
+edge:
+{
+sourcename: "36" 
+targetname: "37" 
+class: 2
+color: red
+label: " HZ 4" 
+}
+edge:
+{
+sourcename: "35" 
+targetname: "41" 
+class: 1
+color: black
+label: " UP 8" 
+}
+edge:
+{
+sourcename: "35" 
+targetname: "36" 
+class: 1
+color: black
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "34" 
+targetname: "31" 
+class: 1
+color: black
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "33" 
+targetname: "31" 
+class: 1
+color: black
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "29" 
+targetname: "24" 
+class: 1
+color: black
+label: " DN 8" 
+}
+edge:
+{
+sourcename: "28" 
+targetname: "27" 
+class: 4
+color: green
+linestyle: dotted
+}
+edge:
+{
+sourcename: "26" 
+targetname: "24" 
+class: 1
+color: black
+label: " DN 8" 
+}
+edge:
+{
+sourcename: "25" 
+targetname: "27" 
+class: 1
+color: black
+label: " UP 8" 
+}
+edge:
+{
+sourcename: "25" 
+targetname: "33" 
+class: 1
+color: black
+label: " UP 8" 
+}
+edge:
+{
+sourcename: "24" 
+targetname: "25" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "23" 
+targetname: "22" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "21" 
+targetname: "23" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "20" 
+targetname: "17" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "19" 
+targetname: "16" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "16" 
+targetname: "20" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "12" 
+targetname: "5" 
+class: 4
+color: green
+linestyle: dotted
+}
+edge:
+{
+sourcename: "11" 
+targetname: "5" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "10" 
+targetname: "14" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "9" 
+targetname: "4" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "8" 
+targetname: "3" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "5" 
+targetname: "13" 
+class: 3
+color: blue
+label: "# HZ 8" 
+}
+edge:
+{
+sourcename: "4" 
+targetname: "14" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "4" 
+targetname: "11" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+edge:
+{
+sourcename: "3" 
+targetname: "13" 
+class: 2
+color: red
+label: " HZ 8" 
+}
+}

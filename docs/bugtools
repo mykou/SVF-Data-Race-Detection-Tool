@@ -1,0 +1,36 @@
+ JavaSplat 	Oracle 	 https://gps.oracle.com/doku.php?id=gps:secassess:security_tool:javasplat 	Marc Schoenefeld (Java security team)
+zzuf 	Caca Labs 	 http://caca.zoy.org/wiki/zzuf 	
+honggfuzz 	Google 	 http://code.google.com/p/honggfuzz/ 	Robert Swiecki <swiecki@…>
+fuzzgrind (not black-box) 	ESEC (CapGemini) 	 http://esec-lab.sogeti.com/pages/Fuzzgrind 	Gabriel Campana (gabriel@…)
+CatchConv (not black-box, built on Valgrind) 	? 	 http://sourceforge.net/projects/catchconv/ 	
+Bunny-the-Fuzzer (not black-box) 	Google 	 http://code.google.com/p/bunny-the-fuzzer/wiki/BunnyDoc 	Michal Zalewski <lcamtuf@…>
+Basic Fuzzing Framework (BFF) 	CERT 	 http://www.cert.org/vuls/discovery/bff.html
+
+
+
+KLEE 	KLEE-LLVM 	 http://klee.llvm.org/ 	?
+S2E (Concolic*) 	EPFL 	 http://dslab.epfl.ch/proj/s2e 	? 
+
+
+
+
+
+
+
+
+Parfait 	C 	Oracle 	 http://parfait.us.oracle.com/ 	parfait-qa_au@…
+Olint 	C 	Oracle 	 http://devtools.us.oracle.com/olint/ 	Ed Christian
+lint 	C 	various 	local distribution 	
+FindBugs 	Java 	U.Maryland? 	 http://findbugs.sourceforge.net/ 	
+PMD 	Java 	InfoEther? 	 http://pmd.sourceforge.net/ 	
+CPPCheck 	C/C++ 	? 	 http://cppcheck.sourceforge.net/ 	
+CheckStyle 	Java 	? 	 http://checkstyle.sourceforge.net/ 	checkstyle-user@…
+Clang's Static Analyser 	C/C++ 	LLVM 	 http://clang-analyzer.llvm.org/ 	
+CodeSonar 	C/C++ 	GrammarTech 	 http://www.grammatech.com/products/codesonar/overview.html 	
+
+
+Frama-C 	C 	CEA List 	 http://frama-c.com/index.html 	CEA List
+CodeRipple (maybe, license) 	C/C++, Java 	FrontEndART 	 http://www.frontendart.com/coderipple 	FrontEndART
+Ratchet (maybe, Windows) 	C 	Alejandro Asenjo 	 http://code.google.com/p/ratchet/ 	Alejandro Asenjo
+Chianti (maybe, dead DL link) 	Java 	? 	 http://aria.cs.vt.edu/projects/chianti/ 	?
+CodeSurfer 	C/C++ 	GrammarTech 	 http://www.grammatech.com/products/codesurfer/overview.html 	

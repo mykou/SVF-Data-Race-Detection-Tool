@@ -1,0 +1,33 @@
+﻿====================================================================================
+Indirect call sites: 1
+====================================================================================
+Function Pointers: 1, evalRoutines
+Comment: evalRoutines is global array of function pointers defined in neval.c
+             typedef int (*EVALFUNC)(int sq,int c);
+             static EVALFUNC evalRoutines[7] = {
+                ErrorIt,
+                Pawn,
+                Knight,
+                King,
+                Rook,
+                Queen,
+                Bishop };
+====================================================================================
+Number of targets: 7 at each call site
+Call hierarchy:
+	main()
+		run_epd_testsuite();			/// line 674, sjeng.c
+			eval()						/// line 271, epd.c
+				std_eval()				/// line 374, eval.c
+CS1					score += (*(evalRoutines[piecet(i)]))(i,pieceside(i));	/// line 500, neval.c
+===============================================================================
+Output from analysis.
+NodeID: 16485
+CallSite:   %call139 = call i32 %82(i32 %83, i32 %and138), !dbg !1119   Location: ln: 500 fl: neval.c    with Targets:
+        King
+        Queen
+        Rook
+        Bishop
+        Knight
+        Pawn
+        ErrorIt

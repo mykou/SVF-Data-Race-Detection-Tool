@@ -1,0 +1,36 @@
+#!/bin/bash
+
+
+LLVM_OBJROOT=/home/yusui/workspace/llvm-obj
+LLVM_BINROOT=$LLVM_OBJROOT/Debug+Asserts/bin
+LLVM_LD=$LLVM_BINROOT/llvm-ld
+LLVM_LINK=$LLVM_BINROOT/llvm-link
+
+SOFTBOUND_ROOT=/home/yusui/workspace/SoftBoundCETS-1.3
+SOFTBOUND_LIB=$SOFTBOUND_ROOT/test
+SOFTBOUNDCETS=$SOFTBOUND_ROOT/Debug+Asserts/bin/SoftBoundCETS
+
+
+eval prog_name=\${$#}
+
+
+# strip arguments llvm-ld doesn't understand
+python << END
+args = []
+for arg in '$@'.split()[:-1]:
+    if arg[:2] in ('-g', '-W', '-O', '-D', '-f'):
+        continue
+    args.append(arg)
+open('link-args.txt', 'w').write(' '.join(args))
+END
+
+#############softbound linkage##################
+$LLVM_LD `cat link-args.txt` $prog_name.orig
+$LLVM_LINK $SOFTBOUND_LIB/softboundcets-checks.bc $prog_name.orig.bc > $prog_name-linked.bc
+$SOFTBOUNDCETS -softboundcets_spatial_safety_store_checks -softboundcets_temporal_bounds_check_opt $prog_name-linked.bc
+$LLVM_LINK $SOFTBOUND_LIB/softboundcets.bc $SOFTBOUND_LIB/softboundcets-wrappers.bc $prog_name-linked.bc.sbpass.bc > $prog_name-softbound.bc
+$LLVM_LD -native -lm -lcrypt -lpthread $prog_name-softbound.bc -o $prog_name
+
+########normal linkage##########
+#$LLVM_LD `cat link-args.txt` $prog_name.orig
+#$LLVM_LD -native -lm -lcrypt -lpthread $prog_name.orig.bc -o $prog_name

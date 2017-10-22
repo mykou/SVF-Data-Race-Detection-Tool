@@ -1,0 +1,77 @@
+﻿=========================================================================================
+Indirect call sites: 9
+=========================================================================================
+Call hierarchy:
+	main()
+init	work = lzw;									/// line 546, gzip.c
+		treat_file(argv[optind++]);					/// line 569, gzip.c
+			... = get_method(ifd);					/// line 803, gzip.c
+init			work = unzip;						/// line 1327, gzip.c
+init			work = unzip;						/// line 1441, gzip.c
+init			work = unpack;						/// line 1447, gzip.c
+init			work = unlzw;						/// line 1451, gzip.c
+init			work = unlzh;						/// line 1456, gzip.c
+init			work = copy;						/// line 1462, gzip.c
+CS1			(*work)(ifd, ofd)						/// line 841, gzip.c
+		treat_stdin();								/// line 572, gzip.c
+CS2			(*work)(fileno(stdin), fileno(stdout))	/// line 676, gzip.c
+-------------------------------------------------------
+NodeID: 3460
+CallSite:   %call204401 = call i32 %247(i32 %248, i32 %249) #3, !dbg !4498      Location: ln: 841 fl: gzip.c     with Targets:
+NodeID: 3492
+CallSite:   %call204 = call i32 %253(i32 %254, i32 %255) #3, !dbg !4498 Location: ln: 841 fl: gzip.c     with Targets:
+        unlzh
+        unlzw
+        unpack
+        unzip
+        copy
+        zip
+
+NodeID: 3857
+CallSite:   %call63111 = tail call i32 %33(i32 %call61109, i32 %call62110) #3, !dbg !4051       Location: ln: 676 fl: gzip.c     with Targets:
+NodeID: 3891
+CallSite:   %call63 = tail call i32 %41(i32 %call61, i32 %call62) #3, !dbg !4051        Location: ln: 676 fl: gzip.c     with Targets:
+        unlzh
+        unlzw
+        unpack
+        unzip
+        copy
+        zip
+=========================================================================================
+Call hierarchy:
+		zip()								/// line 400, spec.c
+			bi_init()						/// line 68, zip.c
+init			read_buf  = file_read;		/// initialization!!! line 120, bits.c
+			lm_init()						/// line 70, zip.c
+CS1				lookahead = read_buf (...);	/// line 338, deflate.c
+			deflate()						/// line 83, zip.c
+CS2				n = read_buf(...);			/// line 571, deflate.c
+-------------------------------------------------------
+Comment: zip() will be invoked when function pointer work points to it as the above result.
+         read_buf is global function pointer defined in bits.c
+             int (*read_buf) OF((char *buf, unsigned size));
+         and defined as external variable in gzip.h
+		     extern int (*read_buf) OF((char *buf, unsigned size));
+-------------------------------------------------------
+NodeID: 1200
+CallSite:   %call = tail call i32 %10(i8* %11, i32 65536) #3, !dbg !4019        Location: ln: 338 fl: deflate.c  with Targets:
+        file_read
+
+NodeID: 1297
+CallSite:   %call = tail call i32 %9(i8* %add.ptr43, i32 %more.0) #3, !dbg !4022        Location: ln: 571 fl: deflate.c  with Targets:
+        file_read
+=========================================================================================
+NodeID: 16073
+CallSite:   call void asm sideeffect "fnstcw $0", "=*m,~{dirflag},~{fpsr},~{flags}"(i16* %_cw) #3, !dbg !4194, !srcloc !4195    Location: ln: 3624 fl: vasnprintf.c
+NodeID: 16082
+CallSite:   call void asm sideeffect "fldcw $0", "*m,~{dirflag},~{fpsr},~{flags}"(i16* %_ncw) #3, !dbg !4196, !srcloc !4197     Location: ln: 3624 fl: vasnprintf.c
+        !!!has no targets!!!
+
+Not compiled.
+=========================================================================================
+NodeID: 16082
+CallSite:   call void asm sideeffect "fldcw $0", "*m,~{dirflag},~{fpsr},~{flags}"(i16* %_ncw619) #3, !dbg !4277, !srcloc !4278  Location: ln: 4065 fl: vasnprintf.c
+        !!!has no targets!!!
+
+Not compiled.
+=========================================================================================

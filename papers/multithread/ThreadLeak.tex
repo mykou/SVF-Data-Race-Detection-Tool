@@ -1,0 +1,29 @@
+% !TEX root =  ThreadReport.tex
+
+\section{Thread Leak and Its Case Study}
+Threaded programs offer potential performance gains compared
+with non-threaded programs.
+A pthread is created either as joinable (by default) or detached. 
+If a thread \emph{t} is created as joinable, an explicit \emph{pthread\_join}
+call needs to be called by another thread (including main thread) to terminate
+\emph{t} and allow the system to reclaim the memory allocated for \emph{t}. 
+On the other hand, the system recycles underlying resources of a detached thread
+automatically after the thread terminates.
+
+The advantage 
+\begin{itemize}
+\item programs can be carried out in parallel,
+\item using a thread group over using a process group is that context
+switching between threads is much faster then context switching between
+processes
+\end{itemize}
+
+\begin{definition}
+If a thread is created as joinable but forget to be joined, then its resources
+or private memory are always kept in the process space and never reclaimed.
+\end{definition}
+
+The \emph{pthread\_join} or \emph{pthread\_detach} function should eventually be
+called for every thread that is created with the detachstate attribute
+so that storage associated with the thread may be
+reclaimed.

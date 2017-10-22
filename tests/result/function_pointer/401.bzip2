@@ -1,0 +1,138 @@
+﻿====================================================================================
+Indirect call sites: 19
+====================================================================================
+Call hierarchy:
+	main()
+		compress(NULL);												/// line 2094, bzip2.c
+			compressStream ( inStr, outStr );						/// line 1428, bzip2.c
+				bzf = BZ2_bzWriteOpen ( &bzerr, ...);   			/// line 454, bzip2.c
+					... = BZ2_bzCompressInit ( &(bzf->strm), ...);	/// line 1019, bzlib.c
+init					strm->bzalloc = default_bzalloc;			/// line 222, bzlib.c
+init					strm->bzfree = default_bzfree;				/// line 223, bzlib.c
+CS1						s = BZALLOC( sizeof(EState) );				/// line 225, bzlib.c
+CS2						s->arr1 = BZALLOC( ... );					/// line 234, bzlib.c
+CS3						s->arr2 = BZALLOC( ... );					/// line 235, bzlib.c
+CS4						s->ftab = BZALLOC( ... );					/// line 236, bzlib.c
+CS5						if (s->arr1 != NULL) BZFREE(s->arr1);		/// line 239, bzlib.c
+CS6						if (s->arr2 != NULL) BZFREE(s->arr2);		/// line 240, bzlib.c
+CS7						if (s->ftab != NULL) BZFREE(s->ftab);		/// line 241, bzlib.c
+CS8						if (s       != NULL) BZFREE(s);				/// line 242, bzlib.c
+					return bzf;										/// line 1026, bzlib.c
+				BZ2_bzWriteClose64( &bzerr, bzf, 0, ...);			/// line 470, bzip2.c
+					BZ2_bzCompressEnd ( &(bzf->strm) );				/// line 1149, bzlib.c
+CS9						if (s->arr1 != NULL) BZFREE(s->arr1);		/// line 533, bzlib.c
+CS10					if (s->arr2 != NULL) BZFREE(s->arr2);		/// line 534, bzlib.c
+CS11					if (s->ftab != NULL) BZFREE(s->ftab);		/// line 535, bzlib.c
+CS12					BZFREE(strm->state);						/// line 536, bzlib.c
+		uncompress(NULL);											/// line 2110, bzip2.c
+			... = uncompressStream ( inStr, outStr );				/// line 1605, bzip2.c
+				bzf = BZ2_bzReadOpen ( &bzerr, ...);				/// line 569, bzip2.c
+					... = BZ2_bzDecompressInit ( &(bzf->strm), ...);/// line 1202, bzlib.c
+init					strm->bzalloc = default_bzalloc;			/// line 562, bzlib.c
+init					strm->bzfree = default_bzfree;				/// line 563, bzlib.c
+					return bzf;										/// line 1210, bzlib.c
+				... = BZ2_bzRead ( &bzerr, bzf, obuf, 5000 );		/// line 577, bzip2.c
+					... = BZ2_bzDecompress ( &(bzf->strm) );		/// line 1271, bzlib.c
+						... = BZ2_decompress ( s );					/// line 898, bzlib.c
+CS13						s->ll16 = BZALLOC( ... );				/// line 252, decompress.c
+CS14						s->ll4  = BZALLOC( ... );				/// line 253, decompress.c
+CS15						s->tt  = BZALLOC( ... );				/// line 258, decompress.c
+				BZ2_bzReadClose ( &bzerr, bzf );					/// line 591, bzip2.c
+					(void)BZ2_bzDecompressEnd ( &(bzf->strm) );		/// line 1227, bzlib.c
+CS16					if (s->tt   != NULL) BZFREE(s->tt);			/// line 926, bzlib.c
+CS17					if (s->ll16 != NULL) BZFREE(s->ll16);		/// line 927, bzlib.c
+CS18					if (s->ll4  != NULL) BZFREE(s->ll4);		/// line 928, bzlib.c
+CS19					BZFREE(strm->state);						/// line 930, bzlib.c
+===============================================================================
+Output from analysis.
+NodeID: 7583
+CallSite:   %call22 = call i8* %13(i8* %15, i32 55768, i32 1), !dbg !781        Location: ln: 225 fl: bzlib.c    with Targets:
+		default_bzalloc
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7615
+CallSite:   %call31 = call i8* %25(i8* %27, i32 %conv30, i32 1), !dbg !788      Location: ln: 234 fl: bzlib.c    with Targets:
+		default_bzalloc
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7630
+CallSite:   %call38 = call i8* %32(i8* %34, i32 %conv37, i32 1), !dbg !789      Location: ln: 235 fl: bzlib.c    with Targets:
+		default_bzalloc
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7646
+CallSite:   %call42 = call i8* %39(i8* %41, i32 262148, i32 1), !dbg !790       Location: ln: 236 fl: bzlib.c    with Targets:
+		default_bzalloc
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7678
+CallSite:   call void %53(i8* %55, i8* %58), !dbg !792  Location: ln: 239 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7695
+CallSite:   call void %62(i8* %64, i8* %67), !dbg !794  Location: ln: 240 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7712
+CallSite:   call void %71(i8* %73, i8* %76), !dbg !795  Location: ln: 241 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 7727
+CallSite:   call void %79(i8* %81, i8* %83), !dbg !796  Location: ln: 242 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 222, bzlib.c
+-------------------------------------------------------
+NodeID: 8353
+CallSite:   call void %11(i8* %13, i8* %16), !dbg !771  Location: ln: 533 fl: bzlib.c    with Targets:
+NodeID: 8370
+CallSite:   call void %20(i8* %22, i8* %25), !dbg !772  Location: ln: 534 fl: bzlib.c    with Targets:
+NodeID: 8387
+CallSite:   call void %29(i8* %31, i8* %34), !dbg !773  Location: ln: 535 fl: bzlib.c    with Targets:
+NodeID: 8399
+CallSite:   call void %36(i8* %38, i8* %40), !dbg !774  Location: ln: 536 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: same targets initialised in line 222, bzlib.c, as node 7678.
+-------------------------------------------------------
+NodeID: 8483
+CallSite:   %call20 = call i8* %12(i8* %14, i32 64144, i32 1), !dbg !777        Location: ln: 565 fl: bzlib.c    with Targets:
+        default_bzalloc
+Comment: initialised in line 562, bzlib.c
+-------------------------------------------------------
+NodeID: 10930
+CallSite:   call void %11(i8* %13, i8* %16), !dbg !771  Location: ln: 926 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 563, bzlib.c
+-------------------------------------------------------
+NodeID: 10947
+CallSite:   call void %20(i8* %22, i8* %25), !dbg !772  Location: ln: 927 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 563, bzlib.c
+-------------------------------------------------------
+NodeID: 10964
+CallSite:   call void %29(i8* %31, i8* %33), !dbg !773  Location: ln: 928 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 563, bzlib.c
+-------------------------------------------------------
+NodeID: 10975
+CallSite:   call void %35(i8* %37, i8* %39), !dbg !774  Location: ln: 930 fl: bzlib.c    with Targets:
+        default_bzfree
+Comment: initialised in line 563, bzlib.c
+-------------------------------------------------------
+NodeID: 20520
+CallSite:   %call = call i8* %239(i8* %241, i32 %conv238, i32 1), !dbg !922     Location: ln: 252 fl: decompress.c       with Targets:
+        default_bzalloc
+Comment: initialised in line 562, bzlib.c
+-------------------------------------------------------
+NodeID: 20538
+CallSite:   %call248 = call i8* %247(i8* %249, i32 %conv247, i32 1), !dbg !924  Location: ln: 253 fl: decompress.c       with Targets:
+        default_bzalloc
+Comment: initialised in line 562, bzlib.c
+-------------------------------------------------------
+NodeID: 20570
+CallSite:   %call265 = call i8* %258(i8* %260, i32 %conv264, i32 1), !dbg !929  Location: ln: 258 fl: decompress.c       with Targets:
+        default_bzalloc
+Comment: initialised in line 562, bzlib.c
+-------------------------------------------------------

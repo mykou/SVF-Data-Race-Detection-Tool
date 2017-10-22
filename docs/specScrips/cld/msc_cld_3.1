@@ -1,0 +1,41 @@
+#!/bin/bash
+
+
+LLVM_OBJROOT=/home/yusui/workspace/llvm-3.1.dbg
+LLVM_BINROOT=$LLVM_OBJROOT/Debug+Asserts/bin
+LLVM_LD=$LLVM_BINROOT/llvm-ld
+LLVM_LINK=$LLVM_BINROOT/llvm-link
+
+MSC_ROOT=/home/yusui/workspace/MemSafeC
+MSC_LIB=$MSC_ROOT/instrumentation_lib
+MSC=$MSC_ROOT/Debug+Asserts/bin/MemSafeC
+
+
+eval prog_name=\${$#}
+
+
+# strip arguments llvm-ld doesn't understand
+python << END
+args = []
+for arg in '$@'.split()[:-1]:
+    if arg[:2] in ('-g', '-W', '-O', '-D', '-f'):
+        continue
+    args.append(arg)
+open('link-args.txt', 'w').write(' '.join(args))
+END
+
+#############softbound linkage##################
+#$LLVM_LD `cat link-args.txt` $prog_name.orig
+#$LLVM_LINK $MSC_LIB/softboundcets-checks.bc $prog_name.orig.bc > $prog_name-linked.bc
+#$MSC -softboundcets_spatial_safety_store_checks -softboundcets_temporal_bounds_check_opt $prog_name-linked.bc
+#$LLVM_LINK $MSC_LIB/softboundcets.bc $MSC_LIB/softboundcets-wrappers.bc $prog_name-linked.bc.sbpass.bc > $prog_name-msc.bc
+#$LLVM_LD -native -lm -lcrypt -lpthread $prog_name-msc.bc -o $prog_name
+
+########normal linkage##########
+$LLVM_LD `cat link-args.txt` $prog_name.orig
+#$MSC $prog_name.orig.bc
+#$LLVM_BINROOT/llc -O0 $prog_name.orig.bc -o $prog_name.s
+#$LLVM_BINROOT/clang++ $prog_name.s -o $prog_name -lm
+$LLVM_LD -native -lm -lcrypt -lpthread $prog_name.orig.bc -o $prog_name
+#llc -filetype=obj $prog_name.orig
+#gcc -o $prog_name -O0 $prog_name.o

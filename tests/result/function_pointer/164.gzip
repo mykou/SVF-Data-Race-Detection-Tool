@@ -1,0 +1,30 @@
+﻿====================================================================================
+Indirect call sites: 2
+====================================================================================
+Function Pointers: 1, read_buf
+Comment: read_buf is global function pointer defined in bits.c
+             int (*read_buf) OF((char *buf, unsigned size));
+         and defined as external variable in gzip.h
+		     extern int (*read_buf) OF((char *buf, unsigned size));
+====================================================================================
+Number of targets: 1 at each call site
+====================================================================================
+Call hierarchy:
+	main()
+		spec_compress()							/// line 300, spec.c
+			zip()								/// line 400, spec.c
+				bi_init()						/// line 60, zip.c
+init				read_buf  = file_read;		/// initialization!!! line 111, bits.c
+				lm_init()						/// line 62, zip.c
+CS1					lookahead = read_buf (...);	/// line 324, deflate.c
+				deflate()						/// line 75, zip.c
+CS2					n = read_buf(...);			/// line 560, deflate.c
+===============================================================================
+Output from analysis.
+NodeID: 1083
+CallSite:   %call = call i32 %20(i8* %21, i32 65536), !dbg !681 Location: ln: 324 fl: deflate.c  with Targets:
+        file_read
+		
+NodeID: 1252
+CallSite:   %call = call i32 %29(i8* %add.ptr43, i32 %33), !dbg !688    Location: ln: 560 fl: deflate.c  with Targets:
+        file_read

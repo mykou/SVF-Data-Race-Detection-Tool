@@ -1,0 +1,3 @@
+file mssa
+b main
+r -mssa case.c.opt

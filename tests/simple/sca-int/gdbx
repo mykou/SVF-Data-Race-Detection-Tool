@@ -1,0 +1,3 @@
+file /home/yusui/workspace/llvm-3.1.dbg/Debug+Asserts/bin/opt
+b main
+r -load=$MSC_OBJ/passes/lptr-vf/liblptrvf.so.1.0 -lptrvf -debug case.c.bc

@@ -1,0 +1,50 @@
+cdir   = .
+srcdir = $(cdir)
+objdir = $(cdir)
+llvmlib = /local/llvm-3.1/lib
+llvmconf = /local/llvm-3.1/bin/llvm-config
+
+VERIFYANA    = anna-verify
+WRITEANA    = anna-write
+
+VER     = 1
+REV     = 0
+EXETEST		= $(VERIFYANA)
+EXEWRITE	= $(WRITEANA)
+
+GXX     = g++-4.6
+GCC     = gcc-4.6
+MKDIR   = mkdir
+RM      = rm
+
+LLVM_LD_FLAGS= -L/local/llvm-3.1/lib $(shell $(llvmconf) --libs) -lpthread -ldl -lm
+
+CFLAGS   = -m64 -Wall -Wextra -O0 -g -fPIC
+INCLUDE = . -I$(LLVM_INCLUDE) -I$(MSC_SRC) -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS
+LINKLIBS = $(MSC_OBJ)/tools/llvm/libllvmutils.a $(LLVM_LD_FLAGS)
+
+all: $(VERIFYANA) $(EXEWRITE)
+
+$(EXEWRITE): $(objdir)/annotation.o $(objdir)/writeAnnotation.o
+	$(MKDIR) -p $(objdir)
+	$(GXX) $(objdir)/annotation.o $(objdir)/writeAnnotation.o $(LINKLIBS)  -o $(EXEWRITE)
+
+$(VERIFYANA): $(objdir)/annotation.o $(objdir)/verifyAnnotation.o
+	$(MKDIR) -p $(objdir)
+	$(GXX) $(objdir)/annotation.o $(objdir)/verifyAnnotation.o $(LINKLIBS)  -o $(VERIFYANA)
+	
+$(objdir)/annotation.o: $(objdir)/annotation.cpp $(objdir)/annotation.h
+	$(MKDIR) -p $(objdir)
+	$(GXX) -c $(CFLAGS) -I$(INCLUDE) $<
+
+$(objdir)/writeAnnotation.o: $(objdir)/writeAnnotation.cpp
+	$(MKDIR) -p $(objdir)
+	$(GXX) -c $(CFLAGS) -I$(INCLUDE) $<
+
+$(objdir)/verifyAnnotation.o: $(objdir)/verifyAnnotation.cpp
+	$(MKDIR) -p $(objdir)
+	$(GXX) -c $(CFLAGS) -I$(INCLUDE) $<
+
+clean:
+	$(RM) -f $(objdir)/*.o $(EXEWRITE) $(VERIFYANA)
+

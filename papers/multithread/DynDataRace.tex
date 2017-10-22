@@ -1,0 +1,82 @@
+% !TEX root =  ThreadReport.tex
+
+\pagebreak
+\section{Dynamic Data Race Detection}
+This section introduces dynamic data race algorithm implemented in ThreadSanitizer (\texttt{TSan}).
+
+
+\begin{tabular}{l@{\hspace{2.8mm}}l}
+\ruledef{\rulename{Fork}}{
+\begin{tabular}{lllll}
+$\fork{i}{j}$ 
+\end{tabular}
+}{
+\begin{tabular}{ll}
+$\vc_i:= \inc_i(\vc_i)$ \quad $\vc_j:= \vc_i \vcmax \vc_j$ 
+\end{tabular}
+}
+\end{tabular}
+
+
+\begin{tabular}{l@{\hspace{2.8mm}}l}
+\ruledef{\rulename{Join}}{
+\begin{tabular}{lllll}
+$\join{i}{j}$ 
+\end{tabular}
+}{
+\begin{tabular}{ll}
+$\vc_i:= \vc_i \vcmax \vc_j$ \quad $\vc_j:= \inc_j(\vc_j)$ 
+\end{tabular}
+}
+\end{tabular}
+
+
+\begin{tabular}{l@{\hspace{2.8mm}}l}
+\ruledef{\rulename{Acquire}}{
+\begin{tabular}{lllll}
+$\acq{i}{l}$ 
+\end{tabular}
+}{
+\begin{tabular}{ll}
+$\vc_i:= \vc_i \vcmax \vc_l$ 
+\end{tabular}
+}
+\end{tabular}
+
+\begin{tabular}{l@{\hspace{2.8mm}}l}
+\ruledef{\rulename{Release}}{
+\begin{tabular}{lllll}
+$\acq{i}{l}$ 
+\end{tabular}
+}{
+\begin{tabular}{ll}
+$\vc_i:= \inc_i(\vc_i)$ \quad $\vc_l:= \vc_i$
+\end{tabular}
+}
+\end{tabular}
+
+
+\begin{tabular}{l@{\hspace{2.8mm}}l}
+\ruledef{\rulename{Load}}{
+\begin{tabular}{lllll}
+$i:p=*q \quad \hb{\epo_w(\shadow(*q))}{\vc_i}  $ 
+\end{tabular}
+}{
+\begin{tabular}{ll}
+$\shadow(*q):=[i,load,\addr(*q),\vc_i] $
+\end{tabular}
+}
+\end{tabular}
+
+
+\begin{tabular}{l@{\hspace{2.8mm}}l}
+\ruledef{\rulename{Store}}{
+\begin{tabular}{lllll}
+$i:*p=q \quad \hb{\epo_r(\shadow(*p))}{\vc_i} \quad \hb{\epo_w(\shadow(*p))}{\vc_i}  $ 
+\end{tabular}
+}{
+\begin{tabular}{ll}
+$\shadow(*p):=[i,store,\addr(*p),\vc_i] $
+\end{tabular}
+}
+\end{tabular}

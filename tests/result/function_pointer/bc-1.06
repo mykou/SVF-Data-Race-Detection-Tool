@@ -1,0 +1,106 @@
+﻿=========================================================================================
+Indirect call sites: 27
+=========================================================================================
+Call hierarchy:
+	main()
+		open_new_file ()										/// line 233, main.c
+			load_code (*mstr);									/// line 303, main.c
+				execute ();										/// line 337, main.c
+		yyparse ();												/// line 259, main.c
+			run_code ();										/// line 1010, bc.c
+				execute ();										/// line 296, util.c
+param				push_constant (prog_char, const_base);		/// line 188, execute.c
+param				push_constant (input_char, i_base);			/// line 291, execute.c
+CS1-8					in_ch = in_char();						/// line 620, execute.c
+-------------------------------------------------------
+NodeID: 5358
+CallSite:   %call47 = call zeroext i8 %in_char() #6, !dbg !1723 Location: ln: 650 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call53 = call zeroext i8 %in_char() #6, !dbg !1725 Location: ln: 654 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call69 = call zeroext i8 %in_char() #6, !dbg !1741 Location: ln: 668 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call1 = call zeroext i8 %in_char() #6, !dbg !1701  Location: ln: 620 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call3 = call zeroext i8 %in_char() #6, !dbg !1703  Location: ln: 622 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call7 = call zeroext i8 %in_char() #6, !dbg !1704  Location: ln: 625 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call12 = call zeroext i8 %in_char() #6, !dbg !1708 Location: ln: 630 fl: execute.c  with Targets:
+NodeID: 5358
+CallSite:   %call18 = call zeroext i8 %in_char() #6, !dbg !1713 Location: ln: 637 fl: execute.c  with Targets:
+        prog_char
+        input_char
+=========================================================================================
+Call hierarchy:
+	main()
+		open_new_file ()										/// line 233, main.c
+			load_code (*mstr);									/// line 303, main.c
+				execute ();										/// line 337, main.c
+		yyparse ();												/// line 259, main.c
+			run_code ();										/// line 1010, bc.c
+				execute ();										/// line 296, util.c
+param				bc_out_num (ex_stack->s_num, o_base, out_char, std_only);	/// line 258, execute.c
+CS1-10					(*out_char) ('-');										/// line 1472, number.c
+-------------------------------------------------------
+NodeID: 14184
+CallSite:   call void %out_char(i32 45) #6, !dbg !1693  Location: ln: 1472 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 48) #6, !dbg !1707  Location: ln: 1476 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 %add) #6, !dbg !1714        Location: ln: 1484 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 48) #6, !dbg !1725  Location: ln: 1489 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 46) #6, !dbg !1727  Location: ln: 1494 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 %add31) #6, !dbg !1731      Location: ln: 1496 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 48) #6, !dbg !1741  Location: ln: 1503 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 %conv69) #6, !dbg !1832     Location: ln: 1542 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 46) #6, !dbg !1855  Location: ln: 1552 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 %conv95) #6, !dbg !1885     Location: ln: 1561 fl: number.c  with Targets:
+        out_char
+=========================================================================================
+Call hierarchy:
+	main()
+		open_new_file ()										/// line 233, main.c
+			load_code (*mstr);									/// line 303, main.c
+				execute ();										/// line 337, main.c
+		yyparse ();												/// line 259, main.c
+			run_code ();										/// line 1010, bc.c
+				execute ();										/// line 296, util.c
+param				bc_out_num (ex_stack->s_num, o_base, out_char, std_only);	/// line 258, execute.c
+						bc_out_long (..., out_char);			/// line 1544, number.c
+CS1-3						(*out_char) (' ');					/// line 1440, number.c
+-------------------------------------------------------
+NodeID: 14184
+CallSite:   call void %out_char(i32 32) #6, !dbg !1841  Location: ln: 1440 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 48) #6, !dbg !1848  Location: ln: 1445 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 %conv6.i334) #6, !dbg !1851 Location: ln: 1449 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 32) #6, !dbg !1893  Location: ln: 1440 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 48) #6, !dbg !1899  Location: ln: 1445 fl: number.c  with Targets:
+NodeID: 14184
+CallSite:   call void %out_char(i32 %conv6.i) #6, !dbg !1901    Location: ln: 1449 fl: number.c  with Targets:
+        out_char
+=========================================================================================
+NodeID: 14139
+CallSite:   call void %out_char(i32 32) #6, !dbg !1692  Location: ln: 1440 fl: number.c
+        !!!has no targets!!!
+
+NodeID: 14139
+CallSite:   call void %out_char(i32 48) #6, !dbg !1698  Location: ln: 1445 fl: number.c
+        !!!has no targets!!!
+
+NodeID: 14139
+CallSite:   call void %out_char(i32 %conv6) #6, !dbg !1701      Location: ln: 1449 fl: number.c
+        !!!has no targets!!!
+Comment: Why has different PAG node id with the same line number as the above indirect call site. See node id 14184.
+=========================================================================================

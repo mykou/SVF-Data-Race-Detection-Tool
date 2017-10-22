@@ -1,0 +1,449 @@
+﻿=========================================================================================
+Indirect call sites: 24
+=========================================================================================
+NodeID: 7471
+CallSite:   %call4 = call i32 (double, ...)* %callee.knr.cast(double 0.000000e+00), !dbg !2245  Location: ln: 171 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 7722
+CallSite:   %call10 = call i32 (double, ...)* %callee.knr.cast(double %div), !dbg !2256 Location: ln: 249 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 8174
+CallSite:   %call55 = call i32 (double, ...)* %callee.knr.cast(double %div54), !dbg !2291       Location: ln: 378 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 8486
+CallSite:   %call6 = call i32 (double, ...)* %callee.knr.cast(double %div), !dbg !2254  Location: ln: 465 fl: animate.c  with Targets:
+NodeID: 8702
+CallSite:   %call91 = call i32 (double, ...)* %callee.knr.cast90(double %div89), !dbg !2304     Location: ln: 515 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 9134
+CallSite:   %call23 = call i32 (double*, double, ...)* %callee.knr.cast(double* %Tke, double 0.000000e+00), !dbg !2268  Location: ln: 624 fl: animate.c  with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 9237
+CallSite:   %call62 = call i32 (double, ...)* %callee.knr.cast61(double %div60), !dbg !2297     Location: ln: 656 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 9814
+CallSite:   %call92 = call i32 (double, ...)* %callee.knr.cast(double %div91), !dbg !2308       Location: ln: 816 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 10480
+CallSite:   %call125 = call i32 (double, ...)* %callee.knr.cast(double %div124), !dbg !2326     Location: ln: 978 fl: animate.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 39291
+CallSite:   %call29 = call i32 (double*, double, ...)* %callee.knr.cast(double* %vtemp, double 0.000000e+00), !dbg !2238        Location: ln: 170 fl: tset.c     with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 39874
+CallSite:   %call32 = call i32 (double*, double, ...)* %callee.knr.cast(double* %V, double 0.000000e+00), !dbg !2239    Location: ln: 410 fl: tset.c     with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 43046
+CallSite:   %call = call i32 (double*, double, ...)* %callee.knr.cast(double* %vb, double 0.000000e+00), !dbg !2195     Location: ln: 57 fl: optimist.c  with Targets:
+NodeID: 43117
+CallSite:   %call33 = call i32 (double*, double, ...)* %callee.knr.cast32(double* %vt, double %27), !dbg !2216  Location: ln: 78 fl: optimist.c  with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 43065
+CallSite:   %call11 = call i32 (double, ...)* %callee.knr.cast10(double 0.000000e+00), !dbg !2199       Location: ln: 60 fl: optimist.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 43255
+CallSite:   %call6 = call i32 (double*, double, ...)* %callee.knr.cast(double* %vb, double 0.000000e+00), !dbg !2204    Location: ln: 121 fl: optimist.c         with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 43274
+CallSite:   %call14 = call i32 (double, ...)* %callee.knr.cast13(double 0.000000e+00), !dbg !2208       Location: ln: 124 fl: optimist.c         with Targets:
+NodeID: 43335
+CallSite:   %call44 = call i32 (double, ...)* %callee.knr.cast43(double 0.000000e+00), !dbg !2223       Location: ln: 148 fl: optimist.c         with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 43476
+CallSite:   %call10 = call i32 (double*, double, ...)* %callee.knr.cast(double* %arrayidx9, double 0.000000e+00), !dbg !2215    Location: ln: 192 fl: optimist.c         with Targets:
+NodeID: 43516
+CallSite:   %call25 = call i32 (double*, double, ...)* %callee.knr.cast24(double* %arrayidx23, double %24), !dbg !2222  Location: ln: 200 fl: optimist.c         with Targets:
+NodeID: 43591
+CallSite:   %call63 = call i32 (double*, double, ...)* %callee.knr.cast62(double* %fvt, double %49), !dbg !2245 Location: ln: 225 fl: optimist.c         with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 46870
+CallSite:   %call3 = call i32 (double*, double, ...)* %callee.knr.cast(double* %vt, double 0.000000e+00), !dbg !2244    Location: ln: 72 fl: monitor.c   with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 46882
+CallSite:   %call9 = call i32 (double, ...)* %callee.knr.cast8(double 0.000000e+00), !dbg !2247 Location: ln: 75 fl: monitor.c   with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+
+NodeID: 47251
+CallSite:   %call3 = call i32 (double*, double, ...)* %callee.knr.cast(double* %vt, double 0.000000e+00), !dbg !2244    Location: ln: 182 fl: monitor.c  with Targets:
+        v_bond
+        v_mmbond
+        v_tether
+        v_ho_tether
+        v_restrain
+        v_box
+        v_noel
+        v_ho_noel
+        v_torsion
+        v_ho_bond
+        v_angle
+        v_mmangle
+        v_c_angle
+        v_ho_angle
+        v_hybrid
+        u_v_nonbon
+
+NodeID: 47263
+CallSite:   %call9 = call i32 (double, ...)* %callee.knr.cast8(double 0.000000e+00), !dbg !2247 Location: ln: 185 fl: monitor.c  with Targets:
+        f_mmbond
+        f_bond
+        f_tether
+        f_ho_tether
+        f_restrain
+        f_box
+        f_noel
+        f_ho_noel
+        f_torsion
+        f_ho_bond
+        f_angle
+        f_mmangle
+        f_c_angle
+        f_ho_angle
+        f_hybrid
+        u_f_nonbon
+-------------------------------------------------------
+Call hierarchy:
+	main()
+		read_eval_do(...);												/// line 141, ammp.c
+			eval(...);													/// line 255, eval.c
+init			potentials[0] = v_bond;									/// line 321, eval.c
+init			potentials[1] = v_angle;								/// line 322, eval.c
+init			potentials[2] = u_v_nonbon;								/// line 323, eval.c
+init			potentials[3] = v_torsion;								/// line 324, eval.c
+init			potentials[4] = v_hybrid;								/// line 325, eval.c
+init			forces[0] = f_bond;										/// line 326, eval.c
+init			forces[1] = f_angle;									/// line 327, eval.c
+init			forces[2] = u_f_nonbon;									/// line 328, eval.c
+init			forces[3] = f_torsion;									/// line 329, eval.c
+init			forces[4] = f_hybrid;									/// line 330, eval.c
+
+				tmin( op,echo,itemp[1],itemp[2],itemp[3],itemp[4],itemp[5],potentials,nused);	/// line 522, eval.c
+					(*vfs[ifs])( &vtemp,0.);							/// line 170, tset.c
+				tmap( op,echo,potentials,nused,...);					/// line 527, eval.c
+					(*vfs[ifs])(&V,0.);									/// line 410, tset.c
+				AMMPmonitor( potentials,forces,nused,op );				/// line 551, eval.c
+					(*vfs[ifs])(&vt,0.);								/// line 72. monitor.c
+					(*ffs[ifs])(0.);									/// line 75. monitor.c
+				AMMPmonitor_mute( potentials,forces,nused,op );			/// line 556, eval.c
+					(*vfs[ifs])(&vt,0.);								/// line 182, monitor.c
+					(*ffs[ifs])(0.);									/// line 185, monitor.c
+
+recursion		read_eval_do(newfile, op);								/// line 611, eval.c
+
+init			{forces[nused] = u_f_nonbon; potentials[nused++] = u_v_nonbon;}		/// line 657, eval.c
+init			{forces[nused] = f_bond; potentials[nused++] = v_bond;} 
+init			{forces[nused] = f_mmbond; potentials[nused++] = v_mmbond;} 
+init			{forces[nused] = f_ho_bond; potentials[nused++] = v_ho_bond;} 
+init			{forces[nused] = f_tether; potentials[nused++] = v_tether;} 
+init			{forces[nused] = f_ho_tether; potentials[nused++] = v_ho_tether;} 
+init			{forces[nused] = f_restrain; potentials[nused++] = v_restrain;} 
+init			{forces[nused] = f_angle; potentials[nused++] = v_angle;} 
+init			{forces[nused] = f_ho_angle; potentials[nused++] = v_ho_angle;} 
+init			{forces[nused] = f_mmangle; potentials[nused++] = v_mmangle;} 
+init			{forces[nused] = f_c_angle; potentials[nused++] = v_c_angle;} 
+init			{forces[nused] = f_torsion; potentials[nused++] = v_torsion;} 
+init			{forces[nused] = f_hybrid; potentials[nused++] = v_hybrid;} 
+init			{forces[nused] = f_ho_noel; potentials[nused++] = v_ho_noel;} 
+init			{forces[nused] = f_noel; potentials[nused++] = v_noel;} 
+init			{forces[nused] = f_box; potentials[nused++] = v_box;} 
+
+				verlet(forces, nused, itemp[1], ftemp[2]);						/// line 731, eval.c
+CS1					(*forces[iforces])( 0.);									/// line 171, animate.c
+				pac(forces, nused, itemp[1], ftemp[2]);							/// line 736, eval.c
+CS2					(*forces[iforces])( dtime/2.);								/// line 249, animate.c
+				tpac(forces, nused, itemp[1], ftemp[2], ftemp[3]);				/// line 741, eval.c
+					(*forces[iforces])( dtime/2.);								/// line 378, animate.c
+				ppac(forces, nused, itemp[1], ftemp[2], ftemp[3]);				/// line 746, eval.c
+					(*forces[iforces])( dtime/2.);								/// line 816, animate.c
+				ptpac(forces, nused, itemp[1], ftemp[2], ftemp[3], ftemp[4]);	/// line 751, eval.c
+					(*forces[iforces])( dtime/2.);								/// line 978, animate.c
+				hpac(forces, potentials, nused, itemp[1], ftemp[2], ftemp[3]);	/// line 756, eval.c
+					(*poten[i])(&Tke,0.);										/// line 624, animate.c
+					(*forces[iforces])( dtime/2.);								/// line 656, animate.c
+				pacpac(forces, nused, itemp[1], ftemp[2]);						/// line 761, eval.c
+					(*forces[iforces])( dtime/2.);								/// line 465, animate.c
+				steep( potentials,forces,nused,itemp[1],ftemp[2]);				/// line 767, eval.c
+					(*vfs[ifs])( &vb,  0.);										/// line 57, optimist.c
+					(*ffs[ifs])( 0.);											/// line 60, optimist.c
+					(*vfs[ifs])(&vt, lam);										/// line 78, optimist.c
+				cngdel( potentials,forces,nused,itemp[1],itemp[2],ftemp[3],echo);	/// line 780, eval.c
+					(*vfs[ifs])( &vb,  0.);										/// line 121, optimist.c
+					(*ffs[ifs])( 0.);											/// line 124, optimist.c
+					lam = linmin( vfs,nfs, sqrt(a_max_d()) );					/// line 143, optimist.c
+						(*ffs[i])(&fval[0],0.);									/// line 192, optimist.c
+						(*ffs[i])(&fval[imin],dstep);							/// line 200, optimist.c
+						(*ffs[i])(&fvt,step);									/// line 225, optimist.c
+					(*ffs[ifs])(0. );											/// line 148, optimist.c
+-------------------------------------------------------
+Comment: potentials and forces are global arrays of function pointers defined in line 269, eval.c.
+=========================================================================================

@@ -1,0 +1,754 @@
+Writing 'pag.dot'...
+total query number: 15
+Answering query for node4	 (1/15) 
+   AT node 4(root 4) state 1
+	inverse through Addr edge
+		#Propagate to node 5(root 4)state 2
+   AT node 5(root 4) state 2
+	Sit at Addr node 5
+		#Propagate to node 4(root 4)state 3
+   AT node 4(root 4) state 3
+node 4 alias set: {}
+Answering query for node6	 (2/15) 
+   AT node 6(root 6) state 1
+	inverse through Addr edge
+		#Propagate to node 7(root 6)state 2
+   AT node 7(root 6) state 2
+	Sit at Addr node 7
+		#Propagate to node 6(root 6)state 3
+   AT node 6(root 6) state 3
+node 6 alias set: {}
+Answering query for node10	 (3/15) 
+   AT node 10(root 10) state 1
+	inverse through Addr edge
+		#Propagate to node 11(root 10)state 2
+   AT node 11(root 10) state 2
+	Sit at Addr node 11
+		#Propagate to node 10(root 10)state 3
+   AT node 10(root 10) state 3
+node 10 alias set: {}
+Answering query for node12	 (4/15) 
+   AT node 12(root 12) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 12)state 2
+   AT node 13(root 12) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 12)state 3
+   AT node 12(root 12) state 3
+	forward through Store, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+	Capture Match StoreSrc node 12 to LoadDst node 24
+		@Add AliasSet (12--> 24)
+	Capture Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S3)  from node 12 to node 24
+		#Propagate to node 24(root 12)state 3
+	Propagate upward(to S3)  from node 12 to node 30
+		#Propagate to node 30(root 12)state 3
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S3)  from node 12 to node 24
+		#Already visited 24(root 12)state 3
+	Propagate upward(to S3)  from node 12 to node 30
+		#Already visited 30(root 12)state 3
+   AT node 30(root 12) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 12) state 3
+	forward through Copy edge
+		@Add AliasSet (25--> 12)
+		#Propagate to node 25(root 12)state 3
+   AT node 25(root 12) state 3
+	forward through Gep edge
+		@Add AliasSet (26--> 12)
+		#Propagate to node 26(root 12)state 3
+   AT node 26(root 12) state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+	Capture Match StoreSrc node 26 to LoadDst node 28
+		@Add AliasSet (26--> 28)
+	Propagate upward(to S3)  from node 26 to node 28
+		@Add AliasSet (28--> 12)
+		#Propagate to node 28(root 12)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 12)state 3
+   AT node 28(root 12) state 3
+node 12 alias set: { 24  25  26  28  30 }
+Answering query for node14	 (5/15) 
+   AT node 14(root 14) state 1
+	inverse through Addr edge
+		#Propagate to node 15(root 14)state 2
+   AT node 15(root 14) state 2
+	Sit at Addr node 15
+		#Propagate to node 14(root 14)state 3
+   AT node 14(root 14) state 3
+node 14 alias set: {}
+Answering query for node16	 (6/15) 
+   AT node 16(root 16) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 16)state 2
+   AT node 17(root 16) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 16)state 3
+   AT node 16(root 16) state 3
+	forward through Store, propagate down
+		#Propagate to node 28(root 28)state 1
+   AT node 28(root 28) state 1
+	Alias Match LoadDst node 28 to StoreSrc node 26
+		@Add AliasSet (26--> 28)
+		#Propagate to node 26(root 28)state 1
+	inverse through Load, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+	Propagate upward(to S1)  from node 28 to node 26
+		#Already visited 26(root 28)state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S1)  from node 28 to node 26
+		#Already visited 26(root 28)state 1
+   AT node 26(root 28) state 1
+	inverse through Gep edge
+		@Add AliasSet (25--> 28)
+		#Propagate to node 25(root 28)state 1
+   AT node 25(root 28) state 1
+	inverse through Copy edge
+		@Add AliasSet (24--> 28)
+		#Propagate to node 24(root 28)state 1
+   AT node 24(root 28) state 1
+	Alias Match LoadDst node 24 to StoreSrc node 12
+		@Add AliasSet (12--> 28)
+		#Propagate to node 12(root 28)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 28)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 28)state 1
+   AT node 12(root 28) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 28)state 2
+   AT node 13(root 28) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 28)state 3
+   AT node 12(root 28) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 28)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (30--> 28)
+		#Propagate to node 30(root 28)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 28) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 28) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 28)state 3
+   AT node 25(root 28) state 3
+	forward through Gep edge
+		#Propagate to node 26(root 28)state 3
+   AT node 26(root 28) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		#Propagate to node 28(root 28)state 3
+	forward through Store, propagate down
+		#Already visited 20(root 20)state 1
+   AT node 28(root 28) state 3
+node 16 alias set: {}
+Answering query for node18	 (7/15) 
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+node 18 alias set: {}
+Answering query for node20	 (8/15) 
+   AT node 20(root 20) state 1
+		@Add AliasSet (26--> 28)
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+node 20 alias set: {}
+Answering query for node24	 (9/15) 
+   AT node 24(root 24) state 1
+	Alias Match LoadDst node 24 to StoreSrc node 12
+		@Add AliasSet (12--> 24)
+		#Propagate to node 12(root 24)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 24)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 24)state 1
+   AT node 12(root 24) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 24)state 2
+   AT node 13(root 24) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 24)state 3
+   AT node 12(root 24) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 24)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (30--> 24)
+		#Propagate to node 30(root 24)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 24) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 24) state 3
+	forward through Copy edge
+		@Add AliasSet (25--> 24)
+		#Propagate to node 25(root 24)state 3
+   AT node 25(root 24) state 3
+	forward through Gep edge
+		@Add AliasSet (26--> 24)
+		#Propagate to node 26(root 24)state 3
+   AT node 26(root 24) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		@Add AliasSet (28--> 24)
+		#Propagate to node 28(root 24)state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+		@Add AliasSet (26--> 28)
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 24)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 24)state 3
+   AT node 28(root 24) state 3
+node 24 alias set: { 12  25  26  28  30 }
+Answering query for node25	 (10/15) 
+   AT node 25(root 25) state 1
+	inverse through Copy edge
+		@Add AliasSet (24--> 25)
+		#Propagate to node 24(root 25)state 1
+   AT node 24(root 25) state 1
+	Alias Match LoadDst node 24 to StoreSrc node 12
+		@Add AliasSet (12--> 25)
+		#Propagate to node 12(root 25)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 25)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 25)state 1
+   AT node 12(root 25) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 25)state 2
+   AT node 13(root 25) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 25)state 3
+   AT node 12(root 25) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 25)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (30--> 25)
+		#Propagate to node 30(root 25)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 25) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 25) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 25)state 3
+   AT node 25(root 25) state 3
+	forward through Gep edge
+		@Add AliasSet (26--> 25)
+		#Propagate to node 26(root 25)state 3
+   AT node 26(root 25) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		@Add AliasSet (28--> 25)
+		#Propagate to node 28(root 25)state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+		@Add AliasSet (26--> 28)
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 25)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 25)state 3
+   AT node 28(root 25) state 3
+node 25 alias set: { 12  24  26  28  30 }
+Answering query for node26	 (11/15) 
+   AT node 26(root 26) state 1
+	inverse through Gep edge
+		@Add AliasSet (25--> 26)
+		#Propagate to node 25(root 26)state 1
+   AT node 25(root 26) state 1
+	inverse through Copy edge
+		@Add AliasSet (24--> 26)
+		#Propagate to node 24(root 26)state 1
+   AT node 24(root 26) state 1
+	Alias Match LoadDst node 24 to StoreSrc node 12
+		@Add AliasSet (12--> 26)
+		#Propagate to node 12(root 26)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 26)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 26)state 1
+   AT node 12(root 26) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 26)state 2
+   AT node 13(root 26) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 26)state 3
+   AT node 12(root 26) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 26)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (30--> 26)
+		#Propagate to node 30(root 26)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 26) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 26) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 26)state 3
+   AT node 25(root 26) state 3
+	forward through Gep edge
+		#Propagate to node 26(root 26)state 3
+   AT node 26(root 26) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		@Add AliasSet (28--> 26)
+		#Propagate to node 28(root 26)state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 26)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 26)state 3
+   AT node 28(root 26) state 3
+node 26 alias set: { 12  24  25  28  30 }
+Answering query for node28	 (12/15) 
+   AT node 28(root 28) state 1
+	Alias Match LoadDst node 28 to StoreSrc node 26
+		@Add AliasSet (26--> 28)
+		#Propagate to node 26(root 28)state 1
+	inverse through Load, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+	Propagate upward(to S1)  from node 28 to node 26
+		#Already visited 26(root 28)state 1
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S1)  from node 28 to node 26
+		#Already visited 26(root 28)state 1
+   AT node 26(root 28) state 1
+	inverse through Gep edge
+		@Add AliasSet (25--> 28)
+		#Propagate to node 25(root 28)state 1
+   AT node 25(root 28) state 1
+	inverse through Copy edge
+		@Add AliasSet (24--> 28)
+		#Propagate to node 24(root 28)state 1
+   AT node 24(root 28) state 1
+	Alias Match LoadDst node 24 to StoreSrc node 12
+		@Add AliasSet (12--> 28)
+		#Propagate to node 12(root 28)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 28)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 24 to node 12
+		#Already visited 12(root 28)state 1
+   AT node 12(root 28) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 28)state 2
+   AT node 13(root 28) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 28)state 3
+   AT node 12(root 28) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 28)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (30--> 28)
+		#Propagate to node 30(root 28)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 28) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 28) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 28)state 3
+   AT node 25(root 28) state 3
+	forward through Gep edge
+		#Propagate to node 26(root 28)state 3
+   AT node 26(root 28) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		#Propagate to node 28(root 28)state 3
+	forward through Store, propagate down
+		#Already visited 20(root 20)state 1
+   AT node 28(root 28) state 3
+node 28 alias set: { 12  24  25  26  30 }
+Answering query for node30	 (13/15) 
+   AT node 30(root 30) state 1
+	Alias Match LoadDst node 30 to StoreSrc node 12
+		@Add AliasSet (12--> 30)
+		#Propagate to node 12(root 30)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+	Propagate upward(to S1)  from node 30 to node 12
+		#Already visited 12(root 30)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 30 to node 12
+		#Already visited 12(root 30)state 1
+   AT node 12(root 30) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 30)state 2
+   AT node 13(root 30) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 30)state 3
+   AT node 12(root 30) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		@Add AliasSet (24--> 30)
+		#Propagate to node 24(root 30)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		#Propagate to node 30(root 30)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 30) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 30) state 3
+	forward through Copy edge
+		@Add AliasSet (25--> 30)
+		#Propagate to node 25(root 30)state 3
+   AT node 25(root 30) state 3
+	forward through Gep edge
+		@Add AliasSet (26--> 30)
+		#Propagate to node 26(root 30)state 3
+   AT node 26(root 30) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		@Add AliasSet (28--> 30)
+		#Propagate to node 28(root 30)state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+		@Add AliasSet (26--> 28)
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 30)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 30)state 3
+   AT node 28(root 30) state 3
+node 30 alias set: { 12  24  25  26  28 }
+Answering query for node31	 (14/15) 
+   AT node 31(root 31) state 1
+	inverse through Gep edge
+	Push field Gep edge, field offset vector size=1
+		#Propagate to node 30(root 31)state 1
+   AT node 30(root 31) state 1
+	Alias Match LoadDst node 30 to StoreSrc node 12
+		#Propagate to node 12(root 31)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 30 to node 12
+		#Already visited 12(root 31)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 30 to node 12
+		#Already visited 12(root 31)state 1
+   AT node 12(root 31) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 31)state 2
+   AT node 13(root 31) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 31)state 3
+   AT node 12(root 31) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 31)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		#Propagate to node 30(root 31)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 31) state 3
+	forward through Gep edge
+	Pop field Gep edge, field offset vector size=0
+		#Propagate to node 31(root 31)state 3
+   AT node 31(root 31) state 3
+   AT node 24(root 31) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 31)state 3
+   AT node 25(root 31) state 3
+	forward through Gep edge
+		#Propagate to node 26(root 31)state 3
+   AT node 26(root 31) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		#Propagate to node 28(root 31)state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+		@Add AliasSet (26--> 28)
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 31)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 31)state 3
+   AT node 28(root 31) state 3
+	Capture Match StoreSrc node 16 to LoadDst node 32
+		@Add AliasSet (16--> 32)
+node 31 alias set: {}
+Answering query for node32	 (15/15) 
+   AT node 32(root 32) state 1
+	Alias Match LoadDst node 32 to StoreSrc node 16
+		@Add AliasSet (16--> 32)
+		#Propagate to node 16(root 32)state 1
+	inverse through Load, propagate down
+		#Propagate to node 31(root 31)state 1
+   AT node 31(root 31) state 1
+	inverse through Gep edge
+	Push field Gep edge, field offset vector size=1
+		#Propagate to node 30(root 31)state 1
+   AT node 30(root 31) state 1
+	Alias Match LoadDst node 30 to StoreSrc node 12
+		#Propagate to node 12(root 31)state 1
+	inverse through Load, propagate down
+		#Propagate to node 18(root 18)state 1
+   AT node 18(root 18) state 1
+		@Add AliasSet (12--> 24)
+		@Add AliasSet (12--> 30)
+	Propagate upward(to S1)  from node 30 to node 12
+		#Already visited 12(root 31)state 1
+	inverse through Addr edge
+		#Propagate to node 19(root 18)state 2
+   AT node 19(root 18) state 2
+	Sit at Addr node 19
+		#Propagate to node 18(root 18)state 3
+   AT node 18(root 18) state 3
+	Propagate upward(to S1)  from node 30 to node 12
+		#Already visited 12(root 31)state 1
+   AT node 12(root 31) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 31)state 2
+   AT node 13(root 31) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 31)state 3
+   AT node 12(root 31) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 31)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		#Propagate to node 30(root 31)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 31) state 3
+	forward through Gep edge
+	Pop field Gep edge, field offset vector size=0
+		#Propagate to node 31(root 31)state 3
+   AT node 31(root 31) state 3
+   AT node 24(root 31) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 31)state 3
+   AT node 25(root 31) state 3
+	forward through Gep edge
+		#Propagate to node 26(root 31)state 3
+   AT node 26(root 31) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		#Propagate to node 28(root 31)state 3
+	forward through Store, propagate down
+		#Propagate to node 20(root 20)state 1
+   AT node 20(root 20) state 1
+		@Add AliasSet (26--> 28)
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 31)state 3
+	inverse through Addr edge
+		#Propagate to node 21(root 20)state 2
+   AT node 21(root 20) state 2
+	Sit at Addr node 21
+		#Propagate to node 20(root 20)state 3
+   AT node 20(root 20) state 3
+	Propagate upward(to S3)  from node 26 to node 28
+		#Already visited 28(root 31)state 3
+   AT node 28(root 31) state 3
+	Propagate upward(to S1)  from node 32 to node 16
+		#Already visited 16(root 32)state 1
+   AT node 16(root 32) state 1
+	inverse through Addr edge
+		#Propagate to node 17(root 32)state 2
+   AT node 17(root 32) state 2
+	Sit at Addr node 17
+		#Propagate to node 16(root 32)state 3
+   AT node 16(root 32) state 3
+	Alias  Match StoreSrc node 16 to LoadDst node 32
+		#Propagate to node 32(root 32)state 3
+	forward through Store, propagate down
+		#Propagate to node 28(root 28)state 1
+   AT node 28(root 28) state 1
+	Alias Match LoadDst node 28 to StoreSrc node 26
+		#Propagate to node 26(root 28)state 1
+	inverse through Load, propagate down
+		#Already visited 20(root 20)state 1
+   AT node 26(root 28) state 1
+	inverse through Gep edge
+		@Add AliasSet (25--> 28)
+		#Propagate to node 25(root 28)state 1
+   AT node 25(root 28) state 1
+	inverse through Copy edge
+		@Add AliasSet (24--> 28)
+		#Propagate to node 24(root 28)state 1
+   AT node 24(root 28) state 1
+	Alias Match LoadDst node 24 to StoreSrc node 12
+		@Add AliasSet (12--> 28)
+		#Propagate to node 12(root 28)state 1
+	inverse through Load, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 12(root 28) state 1
+	inverse through Addr edge
+		#Propagate to node 13(root 28)state 2
+   AT node 13(root 28) state 2
+	Sit at Addr node 13
+		#Propagate to node 12(root 28)state 3
+   AT node 12(root 28) state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 24
+		#Propagate to node 24(root 28)state 3
+	Alias  Match StoreSrc node 12 to LoadDst node 30
+		@Add AliasSet (30--> 28)
+		#Propagate to node 30(root 28)state 3
+	forward through Store, propagate down
+		#Already visited 18(root 18)state 1
+   AT node 30(root 28) state 3
+	forward through Gep edge
+	Not match field Gep edge, field offset vector size=0
+   AT node 24(root 28) state 3
+	forward through Copy edge
+		#Propagate to node 25(root 28)state 3
+   AT node 25(root 28) state 3
+	forward through Gep edge
+		#Propagate to node 26(root 28)state 3
+   AT node 26(root 28) state 3
+	Alias  Match StoreSrc node 26 to LoadDst node 28
+		#Propagate to node 28(root 28)state 3
+	forward through Store, propagate down
+		#Already visited 20(root 20)state 1
+   AT node 28(root 28) state 3
+   AT node 32(root 32) state 3
+	forward through Store, propagate down
+		#Propagate to node 14(root 14)state 1
+   AT node 14(root 14) state 1
+	inverse through Addr edge
+		#Propagate to node 15(root 14)state 2
+   AT node 15(root 14) state 2
+	Sit at Addr node 15
+		#Propagate to node 14(root 14)state 3
+   AT node 14(root 14) state 3
+node 32 alias set: { 16 }

@@ -1,0 +1,137 @@
+﻿=========================================================================================
+Indirect call sites: 9 (release edition will issue 12 indirect call sites)
+=========================================================================================
+NodeID: 30463
+CallSite:   %call3 = call i32 %10(%struct.hmmfile_s* %11, %struct.plan7_s** %12), !dbg !5972    Location: ln: 333 fl: hmmio.c    with Targets:
+        read_bin20hmm
+        read_bin19hmm
+        read_bin17hmm
+        read_bin11hmm
+        read_bin10hmm
+        read_asc20hmm
+        read_asc19hmm
+        read_asc17hmm
+        read_asc11hmm
+        read_asc10hmm
+
+Call hierarchy:
+	main()
+		hmmfp = HMMFileOpen(...);							/// line 297, hmmsearch.c
+init		hmmfp->parser    = read_bin20hmm;				/// line 225, hmmio.c
+init		hmmfp->parser    = read_bin20hmm;				/// line 231, hmmio.c
+init		hmmfp->parser    = read_bin19hmm;				/// line 237, hmmio.c
+init		hmmfp->parser    = read_bin19hmm;				/// line 242, hmmio.c
+init		hmmfp->parser    = read_bin17hmm;				/// line 248, hmmio.c
+init		hmmfp->parser    = read_bin17hmm;				/// line 253, hmmio.c
+init		hmmfp->parser    = read_bin11hmm;				/// line 259, hmmio.c
+init		hmmfp->parser    = read_bin11hmm;				/// line 264, hmmio.c
+init		hmmfp->parser    = read_bin10hmm;				/// line 270, hmmio.c
+init		hmmfp->parser    = read_bin10hmm;				/// line 275, hmmio.c
+		HMMFileRead(hmmfp, ...);							/// line 299, hmmsearch.c
+CS1			return (*hmmfp->parser)(hmmfp, ret_hmm);		/// line 333, hmmio.c
+-------------------------------------------------------
+Comment: call site targets are assigned by      hmmfp = HMMFileOpen(hmmfile, "HMMERDB")
+         in function main(), line 297, file hmmsearch.c or
+         in function main(), line 311/387, file hmmcalibrate.c
+         Function pointer get different targets at different path according to user input. But no corresponding branches at the indirect call site.
+=========================================================================================
+Call hierarchy:
+	main()
+		FullSortTophits(ghit);												/// line 406, hmmsearch.c
+init		specqsort(h->hit, h->num, sizeof(struct hit_s *), hit_comparison);	/// line 307, tophits.c
+				qcmp = compar;													/// line 42, ucbqsort.c
+					qst(base, max);												/// line 47, ucbqsort.c
+CS1						j = ((*qcmp)((jj = base), i) > 0 ? jj : i);				/// line 127, ucbqsort.c
+CS2						if ((*qcmp)(j, (tmp = max - qsz)) > 0) {				/// line 128, ucbqsort.c
+CS3						if ((*qcmp)(j, tmp) < 0)								/// line 131, ucbqsort.c
+CS4						while (i < mid && (*qcmp)(i, mid) <= 0)					/// line 147, ucbqsort.c
+CS5						if ((*qcmp)(mid, j) <= 0) {								/// line 150, ucbqsort.c
+CS6				if ((*qcmp)(j, lo) > 0)											/// line 59, ucbqsort.c
+CS7				while ((*qcmp)(hi -= qsz, min) > 0)								/// line 77, ucbqsort.c
+-------------------------------------------------------
+Comment: only one target out of four is possible. How could flow-sensitive analysis get the other three targets?
+-------------------------------------------------------
+NodeID: 58924
+CallSite:   %call = call i32 (i8*, i8*, ...)* %callee.knr.cast(i8* %19, i8* %20), !dbg !5995    Location: ln: 59 fl: ucbqsort.c  with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+
+NodeID: 58985
+CallSite:   %call32 = call i32 (i8*, i8*, ...)* %callee.knr.cast31(i8* %add.ptr30, i8* %43), !dbg !6009 Location: ln: 77 fl: ucbqsort.c  with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+		
+NodeID: 59106
+CallSite:   %call = call i32 (i8*, i8*, ...)* %callee.knr.cast(i8* %9, i8* %10), !dbg !5983     Location: ln: 127 fl: ucbqsort.c         with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+
+NodeID: 59124
+CallSite:   %call9 = call i32 (i8*, i8*, ...)* %callee.knr.cast8(i8* %14, i8* %add.ptr7), !dbg !5985    Location: ln: 128 fl: ucbqsort.c         with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+
+NodeID: 59141
+CallSite:   %call20 = call i32 (i8*, i8*, ...)* %callee.knr.cast19(i8* %22, i8* %23), !dbg !5988        Location: ln: 131 fl: ucbqsort.c         with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+
+NodeID: 59195
+CallSite:   %call38 = call i32 (i8*, i8*, ...)* %callee.knr.cast37(i8* %42, i8* %43), !dbg !6004        Location: ln: 147 fl: ucbqsort.c         with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+
+NodeID: 59215
+CallSite:   %call48 = call i32 (i8*, i8*, ...)* %callee.knr.cast47(i8* %50, i8* %51), !dbg !6008        Location: ln: 150 fl: ucbqsort.c         with Targets:
+        pkeysort			/// only possible if it is invoked from main() function in file ssi.c
+        skeysort			/// only possible if it is invoked from main() function in file ssi.c
+        hit_comparison		/// Correct
+        gsi_keysorter		/// not possible as it is in dead function.
+=========================================================================================
+NodeID: 90140
+CallSite:   %call21 = call i32 %27(i8* %29, i32* %addend), !dbg !5985   Location: ln: 613 fl: sqio.c     with Targets:
+        endGCGdata
+        endPIR
+        endZuker
+        endEMBL
+        endPearson
+        endGB
+        endStrider
+        endIG
+invoked by different calling contexts which will pass different targets.
+
+Call hierarchy:
+	main()
+		main_loop_serial()												/// line 369, hmmsearch.c
+			while (ReadSeq(sqfp, sqfp->format, &seq, &sqinfo))			/// line 620, hmmsearch.c
+				case SQFILE_IG      : readIG(V);      break;			/// line 1103, sqio.c
+init				readLoop(0, endIG, V);								/// line 698, sqio.c
+				case SQFILE_STRIDER : readStrider(V); break;			/// line 1104, sqio.c
+init				readLoop(1, endStrider, V);							/// line 728, sqio.c
+				case SQFILE_GENBANK : readGenBank(V); break;			/// line 1105, sqio.c
+init				readLoop(0, endGB, V);								/// line 795, sqio.c
+				case SQFILE_FASTA   : readPearson(V); break;			/// line 1106, sqio.c
+init				readLoop(0, endPearson, V);							/// line 888, sqio.c
+				case SQFILE_EMBL    : readEMBL(V);    break;			/// line 1107, sqio.c
+init				readLoop(0, endEMBL, V);							/// line 943, sqio.c
+				case SQFILE_ZUKER   : readZuker(V);   break;			/// line 1108, sqio.c
+init				readLoop(0, endZuker, V);							/// line 986, sqio.c
+				case SQFILE_PIR     : readPIR(V);     break;			/// line 1109, sqio.c
+init				readLoop(0, endPIR, V);								/// line 659, sqio.c
+				case SQFILE_GCGDATA : readGCGdata(V); break; 			/// line 1110, sqio.c
+init				readLoop(0, endGCGdata, V);							/// line 856, sqio.c
+
+	readLoop(..., int (*endTest)(char *,int *), ...)
+CS1		done |= (*endTest)(V->buf, &addend);							/// line 613, sqio.c

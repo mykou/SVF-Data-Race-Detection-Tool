@@ -1,0 +1,60 @@
+%%Basic article template for writing scientific articles in Finnish
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{ae}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{lastpage}
+\usepackage{amsthm}
+\usepackage{multirow}
+
+
+\newtheorem{example}{Example}
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{property}{Property}
+
+\newcommand{\pts}{\emph{pt}}
+\newcommand{\thd}{\emph{T}}
+\newcommand{\vc}{\emph{C}}
+\newcommand{\vcmax}{\sqcup}
+\newcommand{\inc}{\emph{inc}}
+\newcommand{\fork}[2]{\emph{fork}(#1\triangleright#2)}
+\newcommand{\join}[2]{\emph{join}(#1\triangleleft#2)}
+\newcommand{\acq}[2]{\emph{acquire}(#1,#2)}
+\newcommand{\shadow}{\sigma}
+\newcommand{\addr}{\emph{addr}}
+\newcommand{\epoparorder}{\preceq}
+\newcommand{\parorder}{\sqsubseteq}
+\newcommand{\hb}[2]{#1\parorder#2}
+\newcommand{\epo}{\emph{E}}
+
+
+\newcommand{\ruledef}[3]{ #1 & $\frac{\begin{array}[c]{c}#2\end{array}}{\begin{array}[c]{c}#3\end{array}}$}
+\newcommand{\ruledefX}[2]{ \rulename{#1} & $\begin{array}[c]{c}#2\end{array}$}
+\newcommand{\ruledefY}[3]{ $\frac{\begin{array}[c]{c}#2\end{array}}{\begin{array}[c]{c}#3\end{array}}$  &  #1}
+\newcommand{\rulename}[1]{\rulelab{\MakeUppercase{#1}}}
+\newcommand{\rulelab}[1]{{\small\texttt{[{#1}]}}}
+
+
+\begin{document}
+
+\title{Data Race Report}
+\author{Yulei Sui and Peng Di}
+\date{May 13th 2014}
+\maketitle
+
+\input{ThreadAPI.tex}
+
+\input{DynStat.tex}
+
+\input{DynDataRace.tex}
+
+
+
+
+\end{document}

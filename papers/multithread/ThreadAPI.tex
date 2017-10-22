@@ -1,0 +1,153 @@
+% !TEX root =  ThreadReport.tex
+
+\section{Thread API}
+\subsection{Thread Management}
+The following APIs create/destroy/join/detach a thread
+\subsubsection{Create and Terminating a Thread:}
+
+\begin{itemize}
+\item \texttt{pthread\_create(thread, attr, start\_routine, arg)}
+
+A thread (including main) spawns a new thread to call a \emph{start\_routine}
+with an argument \emph{arg}
+
+\item \texttt{pthread\_exit (status)}
+A thread returns normally from its starting rountine, or call pthread\_exit to
+early terminte itself.
+
+\item \texttt{exec() or exit()}
+The entire process is terminated
+ 
+\end{itemize}
+
+
+\subsubsection{Hard to be statically modeled:} 
+The following APIs are hard to model due to its
+
+\begin{itemize}
+  \item \texttt{pthread\_cancel(thread)}
+
+  One thread is terminated by other thread.
+ 
+  \item \texttt{pthread\_join(threadid,status)}
+ 
+  Blocks the calling thread until the specified \emph{threadid} thread (must be
+  created joinable) terminates. Clean up any resources associated with the
+  thread.
+
+  \item \texttt{pthread\_detach(threadid)}
+  The thread are never going to join with the spawner thread again
+  This allows the pthread library to know whether it can immediately
+  dispose of the thread resources once the thread exits (the detached case) or 
+  whether it must keep them around because it may later call pthread\_join on
+  the spawner thread.
+  
+  Multiple pthread\_detach calls on the same target thread causes
+  an error
+ 
+\end{itemize}
+
+
+\subsection{Mutexes}
+\subsubsection{Creating and Destroying Mutexes}
+A mutex variable and its attributes need to be initialized and destroyed when
+they are not used.
+\begin{itemize}
+
+  \item \texttt{pthread\_mutex\_init (mutex,attr)}
+
+  A mutex variable must be initialized before they can be used
+
+  \item \texttt{pthread\_mutex\_destroy (mutex)}
+
+  If a mutex variable is destroyed, then it can not be used later
+
+  \item \texttt{pthread\_mutexattr\_init (attr)}
+
+  A mutex variable attribute must be initialized before they can be used
+
+  \item \texttt{pthread\_mutexattr\_destroyed (attr)}
+
+  If a mutex attribute is destroyed, then it can not be used later
+  
+\end{itemize}
+
+\subsubsection{Locking and Unlocking Mutexes}
+Locking and unlocking a mutex variable is used to protect the code segments to
+avoid data race.
+
+\begin{itemize}
+  \item \texttt{pthread\_mutex\_lock (mutex)}
+  
+  Acquire a lock on a mutex variable by a thread, if the mutex is already
+  locked by another thread, the call will be blocked until the mutex variable is released.
+  
+  \item \texttt{pthread\_mutex\_trylock (mutex)}
+  Attempt to lock a mutex variable, if the mutex is already locked, return a
+  ``busy'' to prevent deadlock 
+  
+  \item \texttt{pthread\_mutex\_unlock (mutex)}
+  Release a mutex by the owning thread. An error occur if (1) mutex was already
+  unlocked (2) the mutex is owned by another thread.
+  
+\end{itemize}
+
+
+\subsection{Condition Variables}
+\subsubsection{Creating and Destroying Condition Variables}
+Similar as mutex variables, conditional variables must be initialized first and
+destroyed when they are not used any more.
+
+\begin{itemize}
+  \item \texttt{pthread\_cond\_init (condition, attr)}
+  
+  Create a condition variable
+
+  \item \texttt{pthread\_cond\_destroy (condition, attr)}
+  
+  Destroy a condition variable
+   
+  \item \texttt{pthread\_cond\_init (attr)}
+  
+  Initialize a condition variable attribute
+   
+  \item \texttt{pthread\_cond\_destroy (attr)}
+  
+  Destroy a condition variable attribute 
+\end{itemize}
+
+\subsubsection{Waiting and Signaling}
+Condition variable provide another way for threads to synchronize. It
+synchronize based on actual values of data instead of
+controling thread access to data
+\begin{itemize}
+  \item \texttt{pthread\_cond\_wait (condition,mutex)}
+  
+  Block the calling thread until the \emph{condition} is signalled.
+  It automatically and atomically releases mutex and wait for the signal.
+  After signal is received the mutex will be automatically and atomically
+  locked 
+  
+  \item  \texttt{pthread\_cond\_signal (condition)}
+  
+  Signal (weak up) another thread which is waiting on the condition variable.
+  It should be called after \emph{mutex} is locked and unlock \emph{mutex} in
+  order for \texttt{pthread\_cond\_wait} to complete
+  
+  \item \texttt{pthread\_cond\_broadcast (condition)}
+  
+  Broadcast signal to weak up more than one thread 
+\end{itemize}
+
+
+
+
+% \begin{tabular}{llllllll}
+% & swaptions & dedup &libjpeg & libxml2 & libtool & zlib & glib & vips & yasm
+% & x264 & gsl
+% \end{tabular}
+
+
+%\bibliographystyle{finplain}
+\bibliographystyle{plain}
+%\bibliography{}

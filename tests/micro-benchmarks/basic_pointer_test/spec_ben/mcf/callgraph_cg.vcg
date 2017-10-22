@@ -1,0 +1,196 @@
+graph:
+{
+title: "Call Graph VCG" 
+color: lightgrey 
+width: 633 
+height: 808 
+finetuning: no 
+xspace: 20
+yspace: 25
+nearedges: no 
+splines: no 
+port_sharing: yes 
+priority_phase: no 
+display_edge_labels: yes
+infoname 1: "CallGraph" 
+node:
+{
+title: "0" 
+label: "mcf1.o(0),gnu_dev_major(0)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "1" 
+label: "mcf1.o(0),gnu_dev_minor(1)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "2" 
+label: "mcf1.o(0),gnu_dev_makedev(2)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "10" 
+label: "mcf1.o(0),primal_net_simplex(10)" 
+color: lightblue 
+textcolor: white 
+bordercolor: white 
+shape: ellipse
+}
+node:
+{
+title: "6" 
+label: "mcf1.o(0),primal_bea_mpp(6)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "3" 
+label: "mcf1.o(0),bea_compute_red_cost(3)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "4" 
+label: "mcf1.o(0),bea_is_dual_infeasible(4)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "9" 
+label: "mcf1.o(0),primal_iminus(9)" 
+color: lightblue 
+textcolor: white 
+bordercolor: white 
+shape: ellipse
+}
+node:
+{
+title: "8" 
+label: "mcf1.o(0),primal_update_flow(8)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "7" 
+label: "mcf1.o(0),refresh_potential(7)" 
+color: lightblue 
+textcolor: white 
+bordercolor: white 
+shape: ellipse
+}
+node:
+{
+title: "11" 
+label: "mcf1.o(0),getfree(11)" 
+color: lightblue 
+textcolor: white 
+bordercolor: white 
+shape: ellipse
+}
+node:
+{
+title: "12" 
+label: "mcf1.o(0),main(12)" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+graph:
+{
+title: "circle" 
+color: lightblue 
+textcolor: magenta 
+shape: ellipse 
+node:
+{
+title: "5" 
+label: "mcf1.o(0),sort_basket(5)" 
+color: red 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+}
+edge:
+{
+sourcename: "10" 
+targetname: "6" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "10" 
+targetname: "9" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "10" 
+targetname: "8" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "10" 
+targetname: "7" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "6" 
+targetname: "3" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "6" 
+targetname: "4" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "6" 
+targetname: "5" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "5" 
+targetname: "5" 
+class: 0
+color: black
+}
+}

@@ -1,0 +1,11 @@
+void foo(int **q){
+	*q = (int*)malloc(1);
+
+}
+
+int main(){
+	int *a;
+	int **p = &a;
+	foo(p);
+
+}

@@ -1,0 +1,4 @@
+file dvf
+b main
+b DAAPass.cpp:77
+r -cdaa -debug-only=dda case.c.bc

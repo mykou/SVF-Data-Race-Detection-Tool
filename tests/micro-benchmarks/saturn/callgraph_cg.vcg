@@ -1,0 +1,161 @@
+graph:
+{
+title: "Call Graph VCG" 
+color: lightgrey 
+width: 633 
+height: 808 
+finetuning: no 
+xspace: 20
+yspace: 25
+nearedges: no 
+splines: no 
+port_sharing: yes 
+priority_phase: no 
+display_edge_labels: yes
+infoname 1: "CallGraph" 
+node:
+{
+title: "0" 
+label: "complex" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "1" 
+label: "foo" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "2" 
+label: "bar" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "4" 
+label: "baz_wrap1" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "5" 
+label: "baz_wrap2" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "3" 
+label: "baz" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "7" 
+label: "intcpy_wrap" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "6" 
+label: "intcpy" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "9" 
+label: "offset_wrap" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "8" 
+label: "offset" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "10" 
+label: "multiple_one" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "11" 
+label: "multiple_two" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+node:
+{
+title: "12" 
+label: "main" 
+color: lightblue 
+textcolor: black 
+bordercolor: black 
+shape: ellipse
+}
+edge:
+{
+sourcename: "9" 
+targetname: "8" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "7" 
+targetname: "6" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "5" 
+targetname: "3" 
+class: 0
+color: black
+}
+edge:
+{
+sourcename: "4" 
+targetname: "3" 
+class: 0
+color: black
+}
+}
